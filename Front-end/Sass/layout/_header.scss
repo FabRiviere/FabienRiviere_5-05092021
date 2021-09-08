@@ -1,0 +1,89 @@
+* {
+    font-family: "Roboto";
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: $color-primary;
+}
+.nav__container {      
+        display: flex;
+        flex-flow: column wrap;
+        
+        align-items: center;
+        font-size: 1.2rem;
+        padding: 1rem;
+        background-color: $color-secondary;     
+}
+
+.link {
+    
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: space-between;
+    &__list {
+        padding: 0;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        & a {
+        color: $color-tertiary;
+        font-weight: bold;
+        
+        }
+    }
+}
+
+.actions {
+    padding: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    &__cart {
+        @include gradient-text;
+        display: flex;
+        align-items: center;
+        &-icon {
+            @include gradient-text;
+            margin-right: 0.5rem;
+            font-size: 2rem; 
+        }
+    }
+}
+
+.button {
+    @include button;
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+    &:hover {
+        @include button-hover;
+    }
+}
+
+input {
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.presentation {
+    background-color: $color-primary;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .1);
+    padding: 1rem;
+    text-align: center;
+    & h1 {
+        margin: 0;
+        color: $color-tertiary;
+        font-size: 1.2rem;
+    }
+}

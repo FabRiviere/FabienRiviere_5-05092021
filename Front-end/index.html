@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Lien vers la police Roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">    
+    
+    <!-- Lien vers FontAwesome-->
+    <script src="https://kit.fontawesome.com/f15107843b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../scss_to_css/main.css">
+    <title>Orinoco - Accueil</title>
+  </head>
+  <body>
+    <header>
+            <nav class="nav">
+                <div class="nav__container">
+                    <a href="index.html" class="logo">
+                        <img src="../../../images/logo_Orinoco-nav.png" alt="image du logo Orinoco" class="img_logo">
+                    </a>
+                    
+                    <div class="link">
+                        <ul class="link__list">
+                            <li class="link__list-item">
+                                <a href="#" class="active">Accueil</a>
+                            </li>
+                            <li class="link__list-item">
+                                <a href="#">Contact</a>
+                            </li>
+                            <li class="link__list-item">
+                                <a href="#">Nos magasins</a>
+                            </li>
+                        </ul>
+
+                        <ul class="actions">
+                            <li class="actions__cart">
+                                
+                                <div class="actions__cart-icon"> 
+                                    <span class="fas fa-shopping-cart"></span> 
+                                </div>
+                                <div class="cart">
+                                    <p class="">Mon Panier</p> <small class=""></small>
+                                </div>                                
+                            </li>
+                            <li class="actions__signup">
+                                <form class="button button-signup">
+                                    <input type="button" value="S'incrire" aria-label="S'incrire">
+                                </form>
+                            </li>
+                            <li class="actions__login">
+                                <form class="button button-login">
+                                    <input type="button" value="Se connecter" aria-label="Se connecter">
+                                </form>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </nav>
+        
+    </header>
+    <main id="main">
+        <div class="presentation">
+            <h1>Chez Orinoco, nous avons ce qu'il vous faut !</h1>
+        </div>
+        <section class="articles__section">
+            <h2 class="articles__section-title">Nos produits</h2>
+
+            <div class="articles__container" id="articles__container">
+
+                <template id="templateArticle">
+                    <div class="article__card">
+                        <article class="article__card-info">
+                            <a href="../produit/produit.html" id="camera__link" class="camera__link">
+                                <img src='' class="article__card-img" id="imgCamera"/>                                                                  
+                                <h3 id="name"></h3>
+                                <p id="description"></p>
+                                <p id="price"></p>
+                            </a>
+                        </article>
+                    </div>
+                </template>
+                
+               
+                
+            </div>
+
+        </section>
+
+    </main>
+    <!-- Optional JavaScript -->
+    <script src="./index.js"></script>
+   
+    
+  </body>
+</html>

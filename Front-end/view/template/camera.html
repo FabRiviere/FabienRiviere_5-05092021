@@ -1,0 +1,30 @@
+<div class="article__card">
+    <div class="article__card-info">
+        <img src='{{camera.imageUrl}}' class="article__card-img"/>                                                                  
+        <h3 id="name">{{camera.name}}</h3>
+        <p id="description"> Description : {{camera.description}}</p>
+        <p id="price">{{camera.price}} €</p>
+    </div>
+    <div class="personnalisation">
+        <div class="lenses">
+            <label for="lenses">Personnalisez avec nos lentilles :</label>
+            <select name="lentilles" id="lenses">
+                <option value="valeur1"selected>{{camera.lenses[0]}}</option>
+                <option value="valeur2">{{camera.lenses[1]}}</option>
+                <option value="valeur3">{{camera.lenses[2]}}</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<!--
+    <template id="template">
+                    <div class="article__card">
+                        <div class="article__card-info">
+                            <img src='{{camera.imageUrl}}' class="article__card-img" id="card__img"/>                                                                  
+                            <h3 id="name">{{camera.name}}</h3>
+                            <p id="description"> Description : {{camera.description}}</p>
+                            
+                        </div>
+                </template>
+-->

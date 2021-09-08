@@ -1,0 +1,70 @@
+.articles__section-title {
+    @include gradient-text;
+    text-align: center;
+    font-size: 3rem;
+    
+}
+
+.articles__container {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    padding: 20px;
+}
+
+.article__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    border: 3px solid $border-color;
+    border-radius: 3rem;
+    margin: 1rem;
+    padding: 1rem;
+    background: $color-gradient;
+    &-img {
+        margin: 0;
+        width: 100%;
+        height: 280px;
+        border-radius: 2rem 2rem 0 0;
+    }
+    &-img img{
+        width: 100%;
+        
+        object-fit: cover;
+        border-radius: 2rem 2rem 0 0;
+        margin: 0;
+    }
+    &-info {
+        width: 100%;
+        background-color: $color-tertiary;
+        border-radius: 2rem;
+        border: 3px solid $border-color;
+        
+    }
+}
+
+#name {
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    padding: 0.2rem;
+    & h3 {
+        margin: 0;
+    }
+}
+
+#description {
+    font-size: 1rem;
+    color: rgb(204, 199, 199);
+    text-align: center;
+    padding: 0.2rem;
+}
+#price {
+    font-size: 1.5rem;
+    color: rgb(94, 226, 175);
+    text-align: right;
+    padding: 0.2rem;
+}
