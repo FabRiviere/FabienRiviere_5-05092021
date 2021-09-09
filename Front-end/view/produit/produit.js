@@ -52,3 +52,42 @@ function changeContentCamera(camera) {
     }
 }
 
+/*
+//-------- Gestion du panier ------------
+
+// Récupération des données selectionnées par l'utilisateur et envoie au panier
+
+// sélection de l'id des options 
+
+const idSelect = document.querySelector("#lenses")
+
+// Récupére le choix de l'utilisateur
+const choixSelect = idSelect.value;
+console.log(choixSelect);
+
+//Selection du bouton Ajouter l'article au panier
+const btnPanier = document.querySelector("#ajoutPanier")
+
+//Ecouter le clic sur bouton et récupération des valeurs
+function addToCart(Event) {
+    Event.preventDefault()
+    let nameProduct = document.getElementById("name").value
+    let priceProduct = document.getElementById("price").value
+
+    // sélection de l'id des options 
+
+    const idSelect = document.querySelector("#lenses")
+
+    // Récupére le choix de l'utilisateur
+    const choixSelect = idSelect.value
+
+    
+    
+
+
+//récupération des valeurs du formulaire
+
+}
+
+btnPanier.addEventListener("submit", addToCart)
+*/

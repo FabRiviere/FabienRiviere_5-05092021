@@ -1,11 +1,12 @@
 // Affichage et interaction sur page d'acceuil
 
 
-//fonction "main" qui va s'éxecuter dès le chargement de la page, mais qu'on va remplacer par fonction qui s'appelle toute seule
+//fonction "articles__container" qui va s'éxecuter dès le chargement de la page, mais qu'on va remplacer par fonction qui s'appelle toute seule
 //On va récupérer des articles grace à une fonction "getCameras"
 //Après avoir récupérer ces articles, on va devoir les afficher :"displayCamera". avec une boucle "for of" (pour chaque camera de la liste de cameras)
 // Comme je veux retourner le "fetch" je mets ma fonction main en "await", et comme await s'éxécute en asynchone j'y ajoute un async
 
+// methode 1
 /*articles__container()
 
 async function articles__container() {
@@ -15,6 +16,8 @@ async function articles__container() {
     }
 }
 */
+
+//methode 2
 
 (async function() {
     const cameras = await getCameras()

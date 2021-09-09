@@ -62,36 +62,30 @@ select {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
+    background-color: #f2f2f2;
 }
 
-.input-group {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+.input-group-number {
     width: 30%;
-    height: 2.5rem;
-    background-color: #fff;
+    background-color: #f2f2f2;
     text-align: center;
-    margin: 0 1rem;
-    &-number {
-        width: 20%;
-        color: #000;
+    margin: 0 0 0 1rem;
+    color: #000;
+    border: 1px solid #2a6bf7;
     }
-}
-.btn-up, .btn-down {
-   background-color: #fff;
-   border: 1px solid #f2f2f2;
-    
+
+#labelQty {
+    color: #000;
 }
 .add {
     margin-right: 0.5rem;
-    width: 70%;
+   
 }
 .add-to-cart {
     
-    width: 100%;
-    height: 2.5rem;
+    
+    
     font-size: 1.2rem;
     background-color: #fff;
     border-radius: 1rem;

@@ -366,46 +366,30 @@ select {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.input-group {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 30%;
-  height: 2.5rem;
-  background-color: #fff;
-  text-align: center;
-  margin: 0 1rem;
+  background-color: #f2f2f2;
 }
 
 .input-group-number {
-  width: 20%;
+  width: 30%;
+  background-color: #f2f2f2;
+  text-align: center;
+  margin: 0 0 0 1rem;
   color: #000;
+  border: 1px solid #2a6bf7;
 }
 
-.btn-up, .btn-down {
-  background-color: #fff;
-  border: 1px solid #f2f2f2;
+#labelQty {
+  color: #000;
 }
 
 .add {
   margin-right: 0.5rem;
-  width: 70%;
 }
 
 .add-to-cart {
-  width: 100%;
-  height: 2.5rem;
   font-size: 1.2rem;
   background-color: #fff;
   border-radius: 1rem;
