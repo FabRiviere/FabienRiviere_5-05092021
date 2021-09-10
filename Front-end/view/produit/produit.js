@@ -48,46 +48,80 @@ function changeContentCamera(camera) {
     
     for (let option of tabOption) {
          
-        document.getElementById("lenses").innerHTML += `<option value="${option}" selected id="options__lenses">${option}</option>`
+        document.getElementById("lenses").innerHTML += `<option value="${option}" id="options__lenses">${option}</option>`
     }
 }
 
-/*
 //-------- Gestion du panier ------------
 
 // Récupération des données selectionnées par l'utilisateur et envoie au panier
 
 // sélection de l'id des options 
 
-const idSelect = document.querySelector("#lenses")
+const optionSelect = document.querySelector("#lenses");
 
-// Récupére le choix de l'utilisateur
-const choixSelect = idSelect.value;
-console.log(choixSelect);
+//selection du bouton dans le DOM
+const addToCart = document.querySelector("#addtocart");
+console.log(addToCart)
 
-//Selection du bouton Ajouter l'article au panier
-const btnPanier = document.querySelector("#ajoutPanier")
+//Ecoute du bouton Ajouter l'article au panier et stopper l'envoi
+addToCart.addEventListener("click", (Event) => {
+    Event.preventDefault();  
 
-//Ecouter le clic sur bouton et récupération des valeurs
-function addToCart(Event) {
-    Event.preventDefault()
-    let nameProduct = document.getElementById("name").value
-    let priceProduct = document.getElementById("price").value
+//Obtention des valeurs du stockage
+function fillStorage () {
+    let name = localStorage.getItem("name");
+    let description = localStorage.getItem("description");
+    let price = localStorage.getItem("price");
+    let quantity = localStorage.getItem("quantity");
+    let option = localStorage.getItem("option");
 
-    // sélection de l'id des options 
+    document.getElementById("name").value = name;
+    document.getElementById("description").value = description;
+    document.getElementById("price").value = price;
+    document.getElementById("quantity_wanted").value = quantity;
+    document.getElementById("options__lenses").value = option;
 
-    const idSelect = document.querySelector("#lenses")
-
-    // Récupére le choix de l'utilisateur
-    const choixSelect = idSelect.value
-
-    
-    
-
-
-//récupération des valeurs du formulaire
-
+    console.log(quantity);
 }
 
-btnPanier.addEventListener("submit", addToCart)
+
+
+// Enregistrer les valeurs dans le stockage
+function recordStorage() {
+    localStorage.setItem("name", document.getElementById("name").value);
+    localStorage.setItem("description", document.getElementById("description").value);
+    localStorage.setItem("price", document.getElementById("price").value);
+    localStorage.setItem("quantity", document.getElementById("quantity_wanted").value);
+    localStorage.setItem("option", document.getElementById("options__lenses").value);
+}
+console.log(recordStorage(price))
+displayAddToCart();
+});
+
+const name = document.querySelector("#name");
+const description = document.querySelector("#description");
+const price = document.querySelector("#price");
+const quantity = document.querySelector("#quantity_wanted");
+const option = document.querySelector("#options__lenses")
+const displayAdd = document.querySelector("#displayAdd");
+
+addToCart.addEventListener("click", function() {
+    localStorage.setItem("name", name.value),
+    localStorage.setItem("description", description.value);
+    localStorage.setItem("price", price.value);
+    localStorage.setItem("quantity", quantity.value);
+    localStorage.setItem("#options__lenses", lenses.value)
+    
+    console.log(description.value);
+
+
+    displayAddToCart();
+});
+
+function displayAddToCart() {
+ displayAdd.textContent = "Ce produit est dans votre panier";
+}
+
 */
+
