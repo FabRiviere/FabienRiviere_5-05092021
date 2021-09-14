@@ -62,66 +62,47 @@ const optionSelect = document.querySelector("#lenses");
 
 //selection du bouton dans le DOM
 const addToCart = document.querySelector("#addtocart");
-console.log(addToCart)
 
-//Ecoute du bouton Ajouter l'article au panier et stopper l'envoi
-addToCart.addEventListener("click", (Event) => {
-    Event.preventDefault();  
 
-//Obtention des valeurs du stockage
-function fillStorage () {
-    let name = localStorage.getItem("name");
-    let description = localStorage.getItem("description");
-    let price = localStorage.getItem("price");
-    let quantity = localStorage.getItem("quantity");
-    let option = localStorage.getItem("option");
+//Ecoute du bouton Ajouter l'article au panier 
+addToCart.addEventListener("click", (products) => {
+     
+     products = {
+        productName: document.getElementById("name").textContent,
+        productPrice: document.getElementById("price").textContent,
+        productId: new URL(location).search.substr(4),               //on retire de la chaine de caractère le début(?id=)
+        productQty:  document.getElementById("quantity_wanted").value,
+        productOption: document.getElementById("lenses").value
+    }
+  
+// déclaration de la variable "productsElt" dans laquelle on met les keys et values qui sont ds le localstorage
+let productsElt = JSON.parse(localStorage.getItem("products"));
 
-    document.getElementById("name").value = name;
-    document.getElementById("description").value = description;
-    document.getElementById("price").value = price;
-    document.getElementById("quantity_wanted").value = quantity;
-    document.getElementById("options__lenses").value = option;
-
-    console.log(quantity);
+// déclaration en constante de la fonction "popupconfirm" pour options pour le client d'aller au panier ou retour à l'accueil
+const popupconfirm =() =>{
+    if(window.confirm(`${document.getElementById("name").textContent} option: ${document.getElementById("lenses").value} a bien été ajouté au panier.
+        Consultez le panier: OK ou retourner à la page d'accueil: ANNULER`)){
+            window.location.href = "../panier/panier.html";
+        }else {
+            window.location.href = "../../../index.html";
+        }
 }
 
+// Fonction ajouter 1 produit sélectionné dans le local storage
+const addLocalStorage = () =>{
+    productsElt.push(products); // ajout ds le tableau de l'objet choisi par le client
+    localStorage.setItem("products", JSON.stringify(productsElt)); // transformation en JSON et envoi ds la key"products" du LStorage
+};
 
-
-// Enregistrer les valeurs dans le stockage
-function recordStorage() {
-    localStorage.setItem("name", document.getElementById("name").value);
-    localStorage.setItem("description", document.getElementById("description").value);
-    localStorage.setItem("price", document.getElementById("price").value);
-    localStorage.setItem("quantity", document.getElementById("quantity_wanted").value);
-    localStorage.setItem("option", document.getElementById("options__lenses").value);
+// si il y a déjà des produits enregistrés dans le local storage(if) ou si il n'y a pas de produits enregistrés (else)
+if (productsElt) {
+    addLocalStorage();
+    popupconfirm();
+} else {
+    productsElt =[];
+    addLocalStorage();
+    popupconfirm();
 }
-console.log(recordStorage(price))
-displayAddToCart();
 });
 
-const name = document.querySelector("#name");
-const description = document.querySelector("#description");
-const price = document.querySelector("#price");
-const quantity = document.querySelector("#quantity_wanted");
-const option = document.querySelector("#options__lenses")
-const displayAdd = document.querySelector("#displayAdd");
-
-addToCart.addEventListener("click", function() {
-    localStorage.setItem("name", name.value),
-    localStorage.setItem("description", description.value);
-    localStorage.setItem("price", price.value);
-    localStorage.setItem("quantity", quantity.value);
-    localStorage.setItem("#options__lenses", lenses.value)
-    
-    console.log(description.value);
-
-
-    displayAddToCart();
-});
-
-function displayAddToCart() {
- displayAdd.textContent = "Ce produit est dans votre panier";
-}
-
-*/
 
