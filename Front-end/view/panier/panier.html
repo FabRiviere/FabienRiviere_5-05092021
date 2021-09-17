@@ -18,14 +18,14 @@
     <header>
             <nav class="nav">
                 <div class="nav__container">
-                    <a href="index.html" class="logo">
+                    <a href="../../../index.html" class="logo">
                         <img src="../../img/logo_Orinoco-nav.png" alt="image du logo Orinoco" class="img_logo">
                     </a>
                     
                     <div class="link">
                         <ul class="link__list">
                             <li class="link__list-item">
-                                <a href="#" class="active">Accueil</a>
+                                <a href="../../../index.html" class="active">Accueil</a>
                             </li>
                             <li class="link__list-item">
                                 <a href="#">Contact</a>
@@ -70,33 +70,14 @@
         <section class="articles__section">
             <h2 class="articles__section-title">Votre Panier</h2>
 
-            <div class="articles__container" id="articles__container">
-
-               <!-- <template id="templateCart"> -->
-                    <div class="article__cart">
-                        <h3 class="products-cart">Produits dans votre panier</h3>
-                        <article class="products__cart-info">
-                            <a href="./Front-end/view/produit/produit.html" id="camera__link-cart" class="camera__link-cart">
-                                <img src='' class="cart__card-img" id="imgCamera"/>                                                                  
-                                <div id="name-product">nom</div>
-                                <div id="quantity-product">qté</div>
-                                <div id="price-product">prix</div>
-                                <div id="delete-product">
-                                    <i class="far fa-trash-alt" id="delete-product"></i>
-                                </div>
-                            </a>
-                        </article>
-
-                        <div class="total-amount" id="total-amount">Montant Total</div>
-                       
-                    </div>
-                <div class="delete-cart">
-                    <div class="delete-cart-text">Vider le panier</div>
+            <div class="cart__container" id="cart__container">
+                <div class="productCart-title">
+                     <div class="product-name"> Nom du produit</div>
+                     <div class="product-price"> Prix</div>
+                     <div class="product-qty"> Quantité</div>
+                     <div class="product-option">Lentilles</div>
+                     <div class="trash-btn"> Supprimer</div>
                 </div>
-               <!-- </template> -->
-                
-               
-                
             </div>
 
         </section>
@@ -104,6 +85,7 @@
     </main>
     <!-- Optional JavaScript -->
     <script src="./panier.js"></script>
+    
    
     
   </body>

@@ -39,12 +39,12 @@ function getCamera(cameraId) {
 function changeContentCamera(camera) {
 
         
-    document.getElementById("imgCamera").src = camera.imageUrl
-    document.getElementById("name").textContent = camera.name
-    document.getElementById("description").textContent = camera.description
-    document.getElementById("price").textContent = camera.price/100 + " €"
+    document.getElementById("imgCamera").src = camera.imageUrl;
+    document.getElementById("name").textContent = camera.name;
+    document.getElementById("description").textContent = camera.description;
+    document.getElementById("price").textContent = camera.price/100 + " €";
     
-    const tabOption = camera.lenses
+    const tabOption = camera.lenses;
     
     for (let option of tabOption) {
          
