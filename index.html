@@ -16,6 +16,7 @@
   </head>
   <body>
     <header>
+        <img src="./Front-end/img/pellicule_horizontale.png" alt="image d'une vielle pellicule" class="img-header"/>
             <nav class="nav">
                 <div class="nav__container">
                     <a href="index.html" class="logo">
@@ -37,13 +38,12 @@
 
                         <ul class="actions">
                             <li class="actions__cart">
-                                
-                                <div class="actions__cart-icon"> 
-                                    <span class="fas fa-shopping-cart"></span> 
-                                </div>
-                                <div class="cart">
-                                    <p class="">Mon Panier</p> <small class=""></small>
-                                </div>                                
+                                                                
+                                    <a href="./Front-end/view/panier/panier.html">
+                                        <i class="fas fa-shopping-cart  actions__cart-icon"></i> 
+                                    </a>                              
+                                    <p class="cart">Mon Panier</p> <small class=""></small>
+                                                              
                             </li>
                             <li class="actions__signup">
                                 <form class="button button-signup">
@@ -74,6 +74,7 @@
 
                 <template id="templateArticle">
                     <div class="article__card">
+                        
                         <article class="article__card-info">
                             <a href="./Front-end/view/produit/produit.html" id="camera__link" class="camera__link">
                                 <img src='' class="article__card-img" id="imgCamera"/>                                                                  

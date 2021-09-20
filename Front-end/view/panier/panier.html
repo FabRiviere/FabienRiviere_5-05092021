@@ -71,13 +71,29 @@
             <h2 class="articles__section-title">Votre Panier</h2>
 
             <div class="cart__container" id="cart__container">
-                <div class="productCart-title">
-                     <div class="product-name"> Nom du produit</div>
+                
+                <div class="cart__container-title">
+                    <div class="product-name"> Nom du produit</div>
                      <div class="product-price"> Prix</div>
                      <div class="product-qty"> Quantité</div>
                      <div class="product-option">Lentilles</div>
-                     <div class="trash-btn"> Supprimer</div>
+                     <div class="product-amount">Montant</div>
+                     <div class="trash-btn"> Supprimer</div> 
                 </div>
+
+                <template id="templateCart">
+                    <div id="cart-empty"></div>
+                    <div class="productCart">
+                        <div id="name"></div>
+                        <div class="pricerow" id="price"></div>
+                        
+                        <input type="number" name="quantity_wanted" class="qtyrow" id="qty" value="" min="1" aria-label="Quantité"/>
+                         
+                        <div id="option"></div>
+                        <div class="amountrow" id="amount"></div>
+                        <button id="trash-btn"><i class="fas fa-trash"></i></button>
+                    </div>
+                </template>
             </div>
 
         </section>

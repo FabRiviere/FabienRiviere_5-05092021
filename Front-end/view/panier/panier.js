@@ -1,63 +1,114 @@
-
-
-
 let productsElt = JSON.parse(localStorage.getItem("products"));
-for (let i = 0; i < productsElt.length; i++) {
 
-let nameProduct = productsElt[i].productName;
-console.log(nameProduct);
-let priceProduct = productsElt[i].productPrice;
-console.log(priceProduct); 
-let IdProduct = productsElt[i].productId;
-console.log(IdProduct);
-let qtyProduct = productsElt[i].productQty;
-console.log(qtyProduct);
-let optionProduct = productsElt[i].productOption;
-console.log(optionProduct);
-
-
-const productList = document.querySelector(".cart__container");
-const productDiv = document.createElement("div");
-
-const newProductName = document.createElement("div");
-const newProductPrice = document.createElement("div");
-const newProductQty = document.createElement("div");
-const newProductOption = document.createElement("div");
-const newProductDelete = document.createElement("button");
+function displayProductInCart (product) {
+    
+    const templateEltCart = document.getElementById("templateCart");
+    const cloneEltCart = document.importNode(templateEltCart.content, true);
+    
+    cloneEltCart.querySelector("#name").textContent = product.productName,
+    cloneEltCart.querySelector("#qty").value = product.productQty,
+    cloneEltCart.querySelector("#price").textContent = product.productPrice,
+    cloneEltCart.querySelector("#option").textContent = product.productOption,
+    cloneEltCart.querySelector("#amount").textContent = product.productQty * parseInt(product.productPrice),
    
-    productDiv.classList.add("productCart");
-    newProductName.innerText = nameProduct;
-    newProductName.classList.add("product-name");
-    productDiv.appendChild(newProductName);
-    
-    productDiv.classList.add("productCart");
-    newProductPrice.innerText = priceProduct;
-    newProductPrice.classList.add("product-price");
-    productDiv.appendChild(newProductPrice);
-    
-    productDiv.classList.add("productCart");
-    newProductQty.innerText = qtyProduct;
-    newProductQty.classList.add("product-qty");
-    productDiv.appendChild(newProductQty);
-    
-    productDiv.classList.add("productCart");
-    newProductOption.innerText = optionProduct;
-    newProductOption.classList.add("product-option");
-    productDiv.appendChild(newProductOption);
-    
-    productDiv.classList.add("productCart");
-    newProductDelete.innerHTML = '<i class="fas fa-trash"></i>';
-    newProductDelete.classList.add("trash-btn");
-    productDiv.appendChild(newProductDelete);
+    document.getElementById("cart__container").appendChild(cloneEltCart);   
 
-    //productList.appendChild(productDiv);
-    productList.appendChild(productDiv);
-    
 };
 
 
 
+function displayProducts (){
 
-          
-               
+    if (productsElt === null){
+        const templateEltCart = document.getElementById("templateCart");
+        const cloneEltCart = document.importNode(templateEltCart.content, true);
+
+        cloneEltCart.getElementById("cart-empty").textContent += "Oups ! Votre panier est vide";
+            document.getElementById("cart__container").appendChild(cloneEltCart);
+    } else {
+        for(i = 0; i < productsElt.length; i++){                    
+           displayProductInCart(productsElt[i]);
+           
+        }              
+    }  
+}
+ displayProducts() ;   
+ 
+
+
+ // Mettre la quantité dans une variable
+
+ 
+   
+
+/*
+    let quantity = document.querySelectorAll(".qtyrow");
+    let priceProduct = parseInt(document.querySelectorAll(".pricerow").textContent);
+    let priceQty = document.querySelectorAll(".amountrow");
+    let result = document.querySelectorAll(".amountrow").textContent ;
+     
+        quantity.forEach(quantity =>{
+            quantity.addEventListener("change", Event =>{
+                quantitySelect = Number(Event.target.value);
+                result = quantitySelect * priceProduct;
+                priceQty.textContent = Number(result);
+                console.log(quantitySelect);
+                console.log(typeof result);
+                console.log(typeof quantitySelect);
+                console.log(typeof priceProduct);
+                console.log(result);
+            });
+            return result
+        })
         
+ ------------------------------      
+ function amountRow () {
+    let inputQty = document.getElementById("qty").value,
+               
+        priceProduct = parseFloat(document.getElementById("price").textContent),
+        result = document.getElementById("amount").value ;
+        
+        result = parseFloat(document.getElementById("qty").value * Number(document.getElementById("price").value));
+    console.log(result);
+
+ };
+
+ 
+ amountRow();
+//-------------------------------------
+
+  let input = document.querySelectorAll(".qtyrow");
+ const priceProduct = parseFloat(document.querySelectorAll(".pricerow").textContent);
+ let result = document.querySelectorAll(".amountrow").value ;
+ let priceQty = document.querySelectorAll(".amountrow");
+
+___________
+ document.querySelectorAll(".qtyrow").forEach(input => {
+     input.addEventListener("input", e =>{
+         quantitySelect = e.target.value;
+         result = quantitySelect * priceProduct;
+         priceQty.textContent = result;
+     })
+     return result
+ })
+________________________
+
+ 
+
+ input.addEventListener("input", e => {
+     quantitySelect = e.target.value
+     console.log(quantitySelect)
+
+     result = quantitySelect * priceProduct;
+     priceQty.textContent = result;
+     console.log(input.value);
+
+
+ }) 
+
+*/
+
+    
+
+     
+ 

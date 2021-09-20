@@ -43,7 +43,7 @@ select {
 .options__lenses {
     color: #000;
 }
-
+/*
 .ajout__panier {
     @include button;
     font-size: 1.2rem;
@@ -66,7 +66,7 @@ select {
     background-color: #f2f2f2;
 }
 
-.input-group-number {
+.qtyrow {
     width: 30%;
     background-color: #f2f2f2;
     text-align: center;
@@ -82,12 +82,28 @@ select {
     margin-right: 0.5rem;
    
 }
+*/
 .add-to-cart {
-    
-    
-    
+
+    @include button;
     font-size: 1.2rem;
-    background-color: #fff;
-    border-radius: 1rem;
     
+    &:hover {
+    @include button-hover;
+    }
+    /*position: absolute;
+    width: 100%;
+    background-color: darkgrey;
+   /* transition: all 0.3s ease-in-out;
+    opacity: 1;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px 20px; */
 }
+/*
+.article__card-info:hover .card {
+    bottom: 50px;
+	opacity: 1;
+	padding: 10px;
+	text-decoration: none;
+} */

@@ -71,7 +71,7 @@ addToCart.addEventListener("click", (products) => {
         productName: document.getElementById("name").textContent,
         productPrice: document.getElementById("price").textContent,
         productId: new URL(location).search.substr(4),               //on retire de la chaine de caractère le début(?id=)
-        productQty:  document.getElementById("quantity_wanted").value,
+        productQty:  document.getElementById("qty").value,
         productOption: document.getElementById("lenses").value
     }
   
@@ -80,7 +80,7 @@ let productsElt = JSON.parse(localStorage.getItem("products"));
 
 // déclaration en constante de la fonction "popupconfirm" pour options pour le client d'aller au panier ou retour à l'accueil
 const popupconfirm =() =>{
-    if(window.confirm(`${document.getElementById("name").textContent} option: ${document.getElementById("lenses").value} a bien été ajouté au panier.
+    if(window.confirm(`${document.getElementById("qty").value} produits,${document.getElementById("name").textContent} option: ${document.getElementById("lenses").value} a bien été ajouté au panier.
         Consultez le panier: OK ou retourner à la page d'accueil: ANNULER`)){
             window.location.href = "../panier/panier.html";
         }else {
