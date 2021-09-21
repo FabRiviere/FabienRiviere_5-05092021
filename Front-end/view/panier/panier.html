@@ -76,7 +76,7 @@
                     <h5 class="product-img"> PRODUIT</h5>
                     <h5 class="product-name"> NOM</h5>
                     <h5 class="product-price"> PRIX</h5>
-                    <h5 class=""> QUANTITÉ</h5>
+                    <h5 class="product-qty"> QTÉ</h5>
                     <h5 class="product-option">OPTION</h5>
                     <h5 class="product-amount">TOTAL</h5>
                     <h5 class="trash-btn"> </h5> 
@@ -85,21 +85,30 @@
                 <template id="templateCart">
                     <div id="cart-empty"></div>
                     <div class="productCart">
-                        <img src="" class="product-img"/>
-                        <div class="product-name" id="name"></div>
-                        <div class="product-price" id="price"></div>
+                        <img src="" id="img"/>
+                        <div id="name"></div>
+                        <div id="price"></div>
                         
-                        <div class="product-qty" id="qty"></div>
+                        <div id="qty"></div>
                          
-                        <div class="product-option" id="option"></div>
-                        <div class="product-amount" id="amount"></div>
+                        <div id="option"></div>
+                        <div id="amount"></div>
                         <button id="trash-btn"><i class="fas fa-trash"></i></button>
                     </div>
                 </template>
-                <div class="total-amount"></div>
-                <div class="delete-cart"></div>
-
+                
             </div>
+            <div class="total__amount" id="total__amount">
+                <template id="templateTotalCart">
+                    
+                        <p classe="total__amount-title">Montant de la commande :</p> 
+                        <div id="total-amount"></div>
+                    
+                </template>
+            </div>
+                <div class="container__delete-cart">
+                   <button type="submit" class="delete-cart">Vider le panier</button> 
+                </div>
 
         </section>
 

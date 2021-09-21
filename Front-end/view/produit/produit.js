@@ -137,7 +137,7 @@ function setItems(product) {
     let cartItems = localStorage.getItem("productsInCart");
     cartItems = JSON.parse(cartItems);
     //console.log("My cartItems are", cartItems);
-// Je donne la consition que si mon article est déjà dans le panier alors j'augmente le nombre
+// Je donne la condition que si mon article est déjà dans le panier alors j'augmente le nombre
     if(cartItems != null){
         
         if(cartItems[product.name] == undefined) {
@@ -172,7 +172,7 @@ function totalCost(product){
     }else {
         localStorage.setItem("totalCost", parseInt(product.price) +" €");
     }
-   
+    console.log("my cartCost is", cartCost);
     
 }
 onLoadCartNumbers();
