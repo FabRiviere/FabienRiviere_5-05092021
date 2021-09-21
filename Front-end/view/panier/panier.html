@@ -16,6 +16,7 @@
   </head>
   <body>
     <header>
+        <img src="../../img/pellicule_horizontale.png" alt="image d'une vielle pellicule" class="img-header"/>
             <nav class="nav">
                 <div class="nav__container">
                     <a href="../../../index.html" class="logo">
@@ -37,13 +38,12 @@
 
                         <ul class="actions">
                             <li class="actions__cart">
-                                
-                                <div class="actions__cart-icon"> 
-                                    <span class="fas fa-shopping-cart"></span> 
-                                </div>
-                                <div class="cart">
-                                    <p class="">Mon Panier</p> <small class=""></small>
-                                </div>                                
+                                                                
+                                    <a href="./Front-end/view/panier/panier.html">
+                                        <i class="fas fa-shopping-cart  actions__cart-icon"></i>Panier<span id="cart-span">0</span> 
+                                    </a>                              
+                                    
+                                                              
                             </li>
                             <li class="actions__signup">
                                 <form class="button button-signup">
@@ -73,27 +73,32 @@
             <div class="cart__container" id="cart__container">
                 
                 <div class="cart__container-title">
-                    <div class="product-name"> Nom du produit</div>
-                     <div class="product-price"> Prix</div>
-                     <div class="product-qty"> Quantité</div>
-                     <div class="product-option">Lentilles</div>
-                     <div class="product-amount">Montant</div>
-                     <div class="trash-btn"> Supprimer</div> 
+                    <h5 class="product-img"> PRODUIT</h5>
+                    <h5 class="product-name"> NOM</h5>
+                    <h5 class="product-price"> PRIX</h5>
+                    <h5 class=""> QUANTITÉ</h5>
+                    <h5 class="product-option">OPTION</h5>
+                    <h5 class="product-amount">TOTAL</h5>
+                    <h5 class="trash-btn"> </h5> 
                 </div>
 
                 <template id="templateCart">
                     <div id="cart-empty"></div>
                     <div class="productCart">
-                        <div id="name"></div>
-                        <div class="pricerow" id="price"></div>
+                        <img src="" class="product-img"/>
+                        <div class="product-name" id="name"></div>
+                        <div class="product-price" id="price"></div>
                         
-                        <input type="number" name="quantity_wanted" class="qtyrow" id="qty" value="" min="1" aria-label="Quantité"/>
+                        <div class="product-qty" id="qty"></div>
                          
-                        <div id="option"></div>
-                        <div class="amountrow" id="amount"></div>
+                        <div class="product-option" id="option"></div>
+                        <div class="product-amount" id="amount"></div>
                         <button id="trash-btn"><i class="fas fa-trash"></i></button>
                     </div>
                 </template>
+                <div class="total-amount"></div>
+                <div class="delete-cart"></div>
+
             </div>
 
         </section>

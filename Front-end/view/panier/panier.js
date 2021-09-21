@@ -1,114 +1,73 @@
-let productsElt = JSON.parse(localStorage.getItem("products"));
+let cartItems = localStorage.getItem("productsInCart");
+cartItems = JSON.parse(cartItems);
 
-function displayProductInCart (product) {
-    
+
+//console.log(cartItems);
+//console.log(typeof cartItems);
+
+function displayProductInCart (cartItems) {
+   
     const templateEltCart = document.getElementById("templateCart");
     const cloneEltCart = document.importNode(templateEltCart.content, true);
     
-    cloneEltCart.querySelector("#name").textContent = product.productName,
-    cloneEltCart.querySelector("#qty").value = product.productQty,
-    cloneEltCart.querySelector("#price").textContent = product.productPrice,
-    cloneEltCart.querySelector("#option").textContent = product.productOption,
-    cloneEltCart.querySelector("#amount").textContent = product.productQty * parseInt(product.productPrice),
+    cloneEltCart.querySelector("#name").textContent = cartItems.name,
+    cloneEltCart.querySelector("#qty").textContent = cartItems.inCart,
+    cloneEltCart.querySelector("#price").textContent = cartItems.price,
+    cloneEltCart.querySelector("#option").textContent = cartItems.option,
+    cloneEltCart.querySelector("#amount").textContent = cartItems.inCart * parseInt(cartItems.price),
    
     document.getElementById("cart__container").appendChild(cloneEltCart);   
 
 };
 
-
-
 function displayProducts (){
 
-    if (productsElt === null){
+    if (cartItems === null){
         const templateEltCart = document.getElementById("templateCart");
         const cloneEltCart = document.importNode(templateEltCart.content, true);
 
         cloneEltCart.getElementById("cart-empty").textContent += "Oups ! Votre panier est vide";
             document.getElementById("cart__container").appendChild(cloneEltCart);
     } else {
-        for(i = 0; i < productsElt.length; i++){                    
-           displayProductInCart(productsElt[i]);
+        for(i = 0; i < cartItems.length; i++){                    
+           displayProductInCart(cartItems[i]);
            
         }              
     }  
 }
  displayProducts() ;   
- 
 
-
- // Mettre la quantité dans une variable
-
- 
-   
+//----------------------------- Essais code --------------------------
+// on va créer une fonction pour afficher les articles qui sont ds le localStorage et ns allons l'appeler au chargemt de la page
+// Et on verifie si il y a ds articles au LS -sinon erreur
 
 /*
-    let quantity = document.querySelectorAll(".qtyrow");
-    let priceProduct = parseInt(document.querySelectorAll(".pricerow").textContent);
-    let priceQty = document.querySelectorAll(".amountrow");
-    let result = document.querySelectorAll(".amountrow").textContent ;
-     
-        quantity.forEach(quantity =>{
-            quantity.addEventListener("change", Event =>{
-                quantitySelect = Number(Event.target.value);
-                result = quantitySelect * priceProduct;
-                priceQty.textContent = Number(result);
-                console.log(quantitySelect);
-                console.log(typeof result);
-                console.log(typeof quantitySelect);
-                console.log(typeof priceProduct);
-                console.log(result);
-            });
-            return result
-        })
+function displayCart() {
+    let cartItems = localStorage.getItem("productsInCart");
+    cartItems = JSON.parse(cartItems);
+    let productContainer = document.querySelector(".productCart");
+    console.log(cartItems);
+    if(cartItems && productContainer) {
+        console.log("running");
+        productContainer.innerText = "";
+        Object.values(cartItems).map(item => {
+
+        const templateEltCart = document.getElementById("templateCart");
+        const cloneEltCart = document.importNode(templateEltCart.content, true);
         
- ------------------------------      
- function amountRow () {
-    let inputQty = document.getElementById("qty").value,
-               
-        priceProduct = parseFloat(document.getElementById("price").textContent),
-        result = document.getElementById("amount").value ;
-        
-        result = parseFloat(document.getElementById("qty").value * Number(document.getElementById("price").value));
-    console.log(result);
+        cloneEltCart.querySelector("#name").textContent = item.name,
+        cloneEltCart.querySelector("#qty").value = item.inCart,
+        cloneEltCart.querySelector("#price").textContent = item.price,
+        cloneEltCart.querySelector("#option").textContent = item.option,
+        cloneEltCart.querySelector("#amount").textContent = item.qty * parseInt(cartItems.price),
+       
+        document.getElementById("cart__Container").appendChild(cloneEltCart);
+        });
+    }
 
- };
+   
+}
 
- 
- amountRow();
-//-------------------------------------
-
-  let input = document.querySelectorAll(".qtyrow");
- const priceProduct = parseFloat(document.querySelectorAll(".pricerow").textContent);
- let result = document.querySelectorAll(".amountrow").value ;
- let priceQty = document.querySelectorAll(".amountrow");
-
-___________
- document.querySelectorAll(".qtyrow").forEach(input => {
-     input.addEventListener("input", e =>{
-         quantitySelect = e.target.value;
-         result = quantitySelect * priceProduct;
-         priceQty.textContent = result;
-     })
-     return result
- })
-________________________
-
- 
-
- input.addEventListener("input", e => {
-     quantitySelect = e.target.value
-     console.log(quantitySelect)
-
-     result = quantitySelect * priceProduct;
-     priceQty.textContent = result;
-     console.log(input.value);
-
-
- }) 
+displayCart();
 
 */
-
-    
-
-     
- 

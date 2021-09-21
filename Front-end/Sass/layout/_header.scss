@@ -42,7 +42,7 @@ body {
     position: absolute;
     top: 80px;
     left: 10px;
-    width: 85%;
+    width: 95%;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-around;
@@ -65,25 +65,37 @@ body {
     padding: 0;
     display: flex;
     flex-flow: row-reverse nowrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     margin:0 0 20px 0;
-    &__cart {
-        color: $color-tertiary;
+    &__cart a{
+        background-color: #0065fc;
+        color: #fff;
+        font-size: 1.2rem;
         display: flex;
+        justify-content: space-between;
         align-items: center;
+        padding: 10px;
+        margin: 10px;
+        width: 100px;
+        border-radius: 20px;
         &-icon {
             @include gradient-text;
             margin-right: 0.5rem;
-            margin-left: 1rem;
-            font-size: 2rem; 
+            margin-left: 0.5rem;
+            padding: 0 10px;
+        }
+        &-icon span {
+            color: rgb(54, 0, 248);
+            vertical-align: text-top;
+            padding: 0 10px;
         }
     }
 }
 
 .button {
     @include button;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-left: 0.5rem;
     &:hover {
         @include button-hover;

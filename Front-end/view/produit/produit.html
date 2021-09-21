@@ -19,14 +19,14 @@
         <img src="../../img/pellicule_horizontale.png" alt="image d'une vielle pellicule" class="img-header"/>
             <nav class="nav">
                 <div class="nav__container">
-                    <a href="index.html" class="logo">
+                    <a href="../../../index.html" class="logo">
                         <img src="../../img/logo_Orinoco-nav.png" alt="image du logo Orinoco" class="img_logo">
                     </a>
                     
                     <div class="link">
                         <ul class="link__list">
                             <li class="link__list-item">
-                                <a href="#" class="active">Accueil</a>
+                                <a href="../../../index.html" class="active">Accueil</a>
                             </li>
                             <li class="link__list-item">
                                 <a href="#">Contact</a>
@@ -39,10 +39,10 @@
                         <ul class="actions">
                             <li class="actions__cart">
                                                                 
-                                    <a href="./Front-end/view/panier/panier.html">
-                                        <i class="fas fa-shopping-cart  actions__cart-icon"></i> 
+                                    <a href="../panier/panier.html">
+                                        <i class="fas fa-shopping-cart  actions__cart-icon"></i>Panier<span id="cart-span">0</span> 
                                     </a>                              
-                                    <p class="cart">Mon Panier</p> <small class=""></small>
+                                    
                                                               
                             </li>
                             <li class="actions__signup">
@@ -71,53 +71,31 @@
             <h2 class="produit__section-title"></h2>
             <div class="produit__container">
 
-                <div class="article__card">
-                    <div class="article__card-info">
-                        <img src='' class="article__card-img" id="imgCamera"/>                                                                  
-                                <h3 id="name"></h3>
-                                <p id="description"></p>
-                                <p id="price"></p>
-                                
-                    </div>
-                    <div class="personnalisation">                     
-                        <div class="lenses">
-                            <label for="lenses">Personnalisez avec nos lentilles :</label>
-                                <select name="lentilles" id="lenses">                                                        
-                            </select>                       
-                        </div>                  
-                    </div>
-
-                    <div class="add">
-                        <button class="add-to-cart" type="submit" id="addtocart">
-                            <i class="fas fa-shopping-cart"></i>
-                            Ajoutez au panier
-                        </button>
-                    </div>
-                   
-                   <!-- <div class="product-quantity">
-                        <div class="quantite">
-                            
-                            <span>
-                                <label for="qty" id="labelQty">Quantité</label>
-                                <input type="number" name="quantity_wanted" id="qty" value="" class="qtyrow" min="1" aria-label="Quantité" required>
-                            </span>                      
-
-                            <div class="add">
-                                <button class="add-to-cart" type="submit" id="addtocart">
-                                    <i class="fas fa-shopping-cart"></i>
-                                    Ajoutez au panier
-                                </button>
-                            </div>
+                <div class="card">
+                    
+                        <div class="article__card-info">
+                            <img src='' class="article__card-img" id="imgCamera" class="imgCamera"/>                                                                  
+                                    <h3 class="name" id="name"></h3>
+                                    <p class="description" id="description"></p>
+                                    <p class="price" id="price"></p>
                         </div>
-                    </div> 
+                        <div class="personnalisation">                     
+                            <div class="lenses">
+                                <label for="lenses">Personnalisez avec nos lentilles :</label>
+                                    <select name="lentilles" id="lenses">                                                        
+                                </select>                       
+                            </div>                  
+                        </div>
 
-                    <div class="displayAdd">
-                        <h3 id="displayAdd"></h3>-->
-                    </div>
-
+                        <div class="add">
+                            <button class="add-cart" type="submit" id="add-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                                Ajoutez au panier
+                            </button>
+                        </div>
+                               
                 </div>
-               
-                
+
             </div>
 
         </section>
@@ -125,6 +103,7 @@
     </main>
     <!-- Optional JavaScript -->
     <script src="./produit.js"></script>
+    
     
   </body>
 </html>
