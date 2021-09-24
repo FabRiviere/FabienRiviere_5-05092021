@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="fr">
-  <head>
+    <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,115 +8,98 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">    
+    <!-- bootstrap -->
     
     <!-- Lien vers FontAwesome-->
     <script src="https://kit.fontawesome.com/f15107843b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../scss_to_css/main.css">
-    <title>Orinoco - Page Panier</title>
-  </head>
-  <body>
-    <header>
-        <img src="../../img/pellicule_horizontale.png" alt="image d'une vielle pellicule" class="img-header"/>
-            <nav class="nav">
-                <div class="nav__container">
-                    <a href="../../../index.html" class="logo">
-                        <img src="../../img/logo_Orinoco-nav.png" alt="image du logo Orinoco" class="img_logo">
-                    </a>
-                    
-                    <div class="link">
-                        <ul class="link__list">
-                            <li class="link__list-item">
-                                <a href="../../../index.html" class="active">Accueil</a>
-                            </li>
-                            <li class="link__list-item">
-                                <a href="#">Contact</a>
-                            </li>
-                            <li class="link__list-item">
-                                <a href="#">Nos magasins</a>
-                            </li>
-                        </ul>
-
-                        <ul class="actions">
-                            <li class="actions__cart">
-                                                                
-                                    <a href="./Front-end/view/panier/panier.html">
-                                        <i class="fas fa-shopping-cart  actions__cart-icon"></i>Panier<span id="cart-span">0</span> 
-                                    </a>                              
-                                    
-                                                              
-                            </li>
-                            <li class="actions__signup">
-                                <form class="button button-signup">
-                                    <input type="button" value="S'incrire" aria-label="S'incrire">
-                                </form>
-                            </li>
-                            <li class="actions__login">
-                                <form class="button button-login">
-                                    <input type="button" value="Se connecter" aria-label="Se connecter">
-                                </form>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div>
-
-            </nav>
-        
-    </header>
-    <main id="main">
-        <div class="presentation">
-            <h1>Chez Orinoco, nous avons ce qu'il vous faut !</h1>
-        </div>
-        <section class="articles__section">
-            <h2 class="articles__section-title">Votre Panier</h2>
-
-            <div class="cart__container" id="cart__container">
+    <title>Orinoco - Panier</title>
+    </head>
+    <body>
+        <header>
+            
+            <div class="overlay">
                 
+            </div>
+            <nav>
+                <h2>Orinocam-Panier</h2>
+                <ul>
+                    <li><a href="../../../index.html">Accueil</a></li>
+                    <li><a href="#">A Propos</a></li>
+                    <li class="cart">
+                        <a href="cart.html">
+                            <i class="fas fa-shopping-basket"></i>Panier<span id="spanCart">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main id="main">
+            <div class="presentation">
+                <h1>Chez Orinoco, nous avons ce qu'il vous faut !</h1>
+            </div>
+
+            <section class="section__cart">
+
+                <h2 class="section__cart-title">Votre Panier</h2>
+                            
                 <div class="cart__container-title">
                     <h5 class="product-img"> PRODUIT</h5>
-                    <h5 class="product-name"> NOM</h5>
+                    <!-- <h5 class="product-name"> NOM</h5> -->
                     <h5 class="product-price"> PRIX</h5>
                     <h5 class="product-qty"> QTÉ</h5>
                     <h5 class="product-option">OPTION</h5>
                     <h5 class="product-amount">TOTAL</h5>
                     <h5 class="trash-btn"> </h5> 
                 </div>
-
-                <template id="templateCart">
-                    <div id="cart-empty"></div>
-                    <div class="productCart">
-                        <img src="" id="img"/>
-                        <div id="name"></div>
-                        <div id="price"></div>
-                        
-                        <div id="qty"></div>
-                         
-                        <div id="option"></div>
-                        <div id="amount"></div>
-                        <button id="trash-btn"><i class="fas fa-trash"></i></button>
-                    </div>
-                </template>
+    
+                <div class="cart__container" id="cart__container">
+                    <template id="templateCartEmpty">
+                        <div id="cart-empty"></div>
+                    </template>
                 
-            </div>
-            <div class="total__amount" id="total__amount">
-                <template id="templateTotalCart">
-                    
-                        <p classe="total__amount-title">Montant de la commande :</p> 
-                        <div id="total-amount"></div>
-                    
-                </template>
-            </div>
-                <div class="container__delete-cart">
-                   <button type="submit" class="delete-cart">Vider le panier</button> 
+    
+               
+                    <template id="templateCart" class="templateCart">                  
+                        <div class="productCart">
+                            <i class="fas fa-trash" id="trash-btn" class="trash"></i>
+                            <img src="" id="imgCart"/>
+                            <div id="nameCart"></div>
+                            <div id="priceCart"></div>
+                            <div id="qty-group">
+                                <i class="fas fa-caret-square-left decrease"></i>
+                                <span id="qtyCart"></span>
+                                <i class="fas fa-caret-square-right increase"></i>
+                            </div>
+                            <div id="optionCart"></div>
+                            <div id="amountCart"></div>
+                        </div>
+                    </template>
                 </div>
-
-        </section>
-
-    </main>
-    <!-- Optional JavaScript -->
-    <script src="./panier.js"></script>
     
-   
+                <div class="container__total" id="container__total">
+                    <template id="templateTotalCart">
+                        <p classe="total__amount-title">Montant du panier :</p> 
+                        <div id="total-amount"></div>
+                    </template>
+                </div>
     
-  </body>
-</html>
+                <div class="container__delete-cart">
+                    <button type="submit" class="delete-cart">Vider le panier</button> 
+                </div>
+    
+            </section>
+
+            <section class="commande">
+                <h2 class="purchase-title"></h2>
+
+
+            </section>
+    
+        </main>
+        <!-- Optional JavaScript -->
+        
+        <script src="./panier.js"></script>
+    </body>
+</html>      
+       

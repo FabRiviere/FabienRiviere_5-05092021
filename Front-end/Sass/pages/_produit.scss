@@ -1,143 +1,115 @@
-.produit__container {
+.container__articles {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    margin: 50px auto 0;
+    padding-bottom: 100px;;
 }
 
-.personnalisation {
-    
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    padding: 0 0 0.5rem 0;
-    background-color: rgb(94, 226, 175);
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 2rem;
-    border: 3px solid #fff;
+a {
+    text-decoration: none;
 }
-.article__card-info{
-    border: none;
-}
-.card {
-    background-color: #f2f2f2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 3rem;
-    margin: 1rem;
-    padding-bottom: 1rem;
-    border: 3px solid $border-color;
-    &-img {
-        margin: 0;
+
+.card  { 
+    width: 80vw;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #f2f2f2;
+    border-radius: 10px 10px 0 0;
+    &__img {
         width: 100%;
-        height: 280px;
-        border-radius: 2rem 2rem 0 0;
-        border-bottom: 3px solid $border-color;
+        border-radius: 10px 10px 0 0;
     }
-    &-img img{
-        width: 100%;
-        object-fit: cover;
-        border-radius: 2rem 2rem 0 0;
-       
-        margin: 0;
+    &__name {
+        text-align: center;
+        padding: 10px;
     }
-    &-info {
-        width: 100%;
-        background-color: #f2f2f2;
-        border-radius: 2rem;
-        
-        
+    &__description {
+        text-align: center;
+        padding: 10px;
+        color: #000;
     }
-}
-.lenses {
-    color: #fff;
-    padding: 0.5rem 2rem;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-}
-label {
-    @include gradient-text;
-    padding: 0.5rem;
-    font-size: 1rem;
-    font-weight: bold;
-    
-}
-select {
-    font-size: 1rem;
-    text-align: center;
-    box-sizing: 100%;
-    padding: 0.5rem 2rem;
-    border-radius: 2rem;
-}
-
-.options__lenses {
-    color: #000;
-}
-/*
-.ajout__panier {
-    @include button;
-    font-size: 1.2rem;
-    
-    &:hover {
-    @include button-hover;
+    &__price {
+        text-align: right;
+        padding: 10px;
     }
 }
 
-.product-quantity {
-    
-    width: 100%;
-    
-}
-.quantite {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: #f2f2f2;
-}
 
-.qtyrow {
-    width: 30%;
-    background-color: #f2f2f2;
-    text-align: center;
-    margin: 0 0 0 1rem;
-    color: #000;
-    border: 1px solid #2a6bf7;
-    }
-
-#labelQty {
-    color: #000;
-}
-.add {
-    margin-right: 0.5rem;
-   
-}
-*/
 .add-cart {
-
-    @include button;
-    font-size: 1.2rem;
-    
-    &:hover {
-    @include button-hover;
-    }
-    /*position: absolute;
+    position: absolute;
     width: 100%;
+    height: 100px;
     background-color: darkgrey;
-   /* transition: all 0.3s ease-in-out;
-    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
     cursor: pointer;
     text-align: center;
-    padding: 10px 20px; */
+    
+    font-size: 2.5rem;
+    font-weight: bold;
 }
-/*
-.article__card-info:hover .card {
-    bottom: 50px;
-	opacity: 1;
-	padding: 10px;
-	text-decoration: none;
-} */
+
+.showcart { 
+    bottom: 230px;
+    opacity: 1;
+    padding: 10px;
+    text-decoration: none;
+  }
+
+
+  /* **************** MEDIA QUERIES */
+  @media screen and (min-width:1200px){
+
+    .card  { 
+        width: 40vw;
+        margin: 20px;
+        position: relative;
+        overflow: hidden;
+        border: 2px solid #f2f2f2;
+        border-radius: 20px 20px 0 0;
+        &__img {
+            width: 100%;
+            border-radius: 20px 20px 0 0;
+        }
+        &__name {
+            text-align: center;
+            padding: 20px;
+            font-size: 2rem;
+        }
+        &__description {
+            text-align: center;
+            padding: 20px;
+            color: #000;
+            font-size: 1.5rem;
+        }
+        &__price {
+            text-align: right;
+            padding: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: green;
+        }
+    }
+    .card__options {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    #options {
+        text-align: center;
+        padding: 20px 40px;
+        margin-bottom: 20px;
+        font-size: 1rem;
+        color: blue;
+        font-weight: bold;
+        &__label {
+            font-size: 1.2rem;
+            padding:20px;
+        }
+
+    }
+      
+  }

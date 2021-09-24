@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="fr">
-  <head>
+    <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,102 +8,58 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">    
-    
+
     <!-- Lien vers FontAwesome-->
     <script src="https://kit.fontawesome.com/f15107843b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../scss_to_css/main.css">
-    <title>Orinoco - Page Produit</title>
-  </head>
-  <body>
-    <header>
-        <img src="../../img/pellicule_horizontale.png" alt="image d'une vielle pellicule" class="img-header"/>
-            <nav class="nav">
-                <div class="nav__container">
-                    <a href="../../../index.html" class="logo">
-                        <img src="../../img/logo_Orinoco-nav.png" alt="image du logo Orinoco" class="img_logo">
-                    </a>
-                    
-                    <div class="link">
-                        <ul class="link__list">
-                            <li class="link__list-item">
-                                <a href="../../../index.html" class="active">Accueil</a>
-                            </li>
-                            <li class="link__list-item">
-                                <a href="#">Contact</a>
-                            </li>
-                            <li class="link__list-item">
-                                <a href="#">Nos magasins</a>
-                            </li>
-                        </ul>
-
-                        <ul class="actions">
-                            <li class="actions__cart">
-                                                                
-                                    <a href="../panier/panier.html">
-                                        <i class="fas fa-shopping-cart  actions__cart-icon"></i>Panier<span id="cart-span">0</span> 
-                                    </a>                              
-                                    
-                                                              
-                            </li>
-                            <li class="actions__signup">
-                                <form class="button button-signup">
-                                    <input type="button" value="S'incrire" aria-label="S'incrire">
-                                </form>
-                            </li>
-                            <li class="actions__login">
-                                <form class="button button-login">
-                                    <input type="button" value="Se connecter" aria-label="Se connecter">
-                                </form>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div>
-
-            </nav>
-        
-    </header>
-    <main>
-        <div class="presentation">
-            <h1>Chez Orinoco, nous avons ce qu'il vous faut !</h1>
-        </div>
-        <section class="produit__section">
-            <h2 class="produit__section-title"></h2>
-            <div class="produit__container">
-
-                <div class="card">
-                    
-                        <div class="article__card-info">
-                            <img src='' class="article__card-img" id="imgCamera" class="imgCamera"/>                                                                  
-                                    <h3 class="name" id="name"></h3>
-                                    <p class="description" id="description"></p>
-                                    <p class="price" id="price"></p>
-                        </div>
-                        <div class="personnalisation">                     
-                            <div class="lenses">
-                                <label for="lenses">Personnalisez avec nos lentilles :</label>
-                                    <select name="lentilles" id="lenses">                                                        
-                                </select>                       
-                            </div>                  
-                        </div>
-
-                        <div class="add">
-                            <button class="add-cart" type="submit" id="add-cart">
-                                <i class="fas fa-shopping-cart"></i>
-                                Ajoutez au panier
-                            </button>
-                        </div>
-                               
-                </div>
-
+    <title>Orinoco - Accueil</title>
+    </head>
+    <body>
+        <header>
+            
+            <div class="overlay">
+                
             </div>
+            <nav>
+                <h2>Orinocam-Accueil</h2>
+                <ul>
+                    <li><a href="../../../index.html">Accueil</a></li>
+                    <li><a href="#">A Propos</a></li>
+                    <li class="cart">
+                        <a href="../panier/panier.html">
+                            <i class="fas fa-shopping-basket"></i>Panier<span id="spanCart">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main id="main">
+            <div class="presentation">
+                <h1>Chez Orinoco, nous avons ce qu'il vous faut !</h1>
+            </div>
+            <section class="articles__section">
+                <div class="container__articles">
+                   
+                       <div class="card">
+                        <div href="#" id="productLink" class="cardLink">
+                           <img src="" alt="image du produit" class="card__img" id="imgCard">
+                           <h3 class="card__name" id="name"></h3>
+                           <p class="card__description" id="description"></p>
+                           <p class="card__price" id="price"></p>
+                           <div class="card__options" id="contOptions">
+                            <label for="options" id="options__label">Personnalisez avec nos lentilles :</label>
+                                <select name="lentilles" id="options"> </select>                                                                        
+                           </div>
+                           <a href="#" class="add-cart">Ajouter au panier</a>
+                        </div>
+                       </div> 
+                    
+                </div>
 
-        </section>
 
-    </main>
-    <!-- Optional JavaScript -->
-    <script src="./produit.js"></script>
-    
-    
-  </body>
+            </section>
+
+<!---------------------------------- Javascript ------------------------------->
+            <script src="./produit.js"></script>
+    </body>
 </html>

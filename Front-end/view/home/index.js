@@ -1,5 +1,3 @@
-// Affichage et interaction sur page d'acceuil
-
 
 //fonction "articles__container" qui va s'éxecuter dès le chargement de la page, mais qu'on va remplacer par fonction qui s'appelle toute seule
 //On va récupérer des articles grace à une fonction "getCameras"
@@ -18,18 +16,16 @@ async function articles__container() {
 */
 
 //methode 2
+//******************* Affichage et interaction sur page d'acceuil******************/
+
+// On créer 1 fonction qui va s'appeler au chargement- on utilise async et await car on attend une promesse dans getcamera(fetch)
 
 (async function() {
     const cameras = await getCameras()
     for (camera of cameras) {
         displayCamera(camera)
     }
-
 })()
-//On créer la fonction "getCameras"
-// Je fais un fetch pour aller chercher les articles "cameras"
-// Puis j'attribue des fonctions avec ".then" lorsqu'il aura récupérer les données- 1er then me récupére les données et me retourne en json
-// puisque je fais un retour dans un then, j'en fais un second pour récupérer les données du 1er
 
 function getCameras() {
     return fetch("http://localhost:3000/api/cameras")
@@ -50,14 +46,43 @@ function getCameras() {
 // J'en profite pour récupérer chaque id d'article qui me seront nécessaire pour faire le lien vers la page de chaque article
 
 function displayCamera() {
-    const templateElt = document.getElementById("templateArticle")
-    const cloneElt = document.importNode(templateElt.content, true)
+    const templateHome = document.getElementById("templateHome");
+    const cloneElt = document.importNode(templateHome.content, true);
 
-    cloneElt.getElementById("imgCamera").src = camera.imageUrl
+    cloneElt.getElementById("imgCard").src = camera.imageUrl
     cloneElt.getElementById("name").textContent = camera.name
     cloneElt.getElementById("description").textContent = camera.description
-    cloneElt.getElementById("price").textContent = camera.price/100 + " €"
-    cloneElt.getElementById("camera__link").href += `?id=${camera._id}`
+    cloneElt.getElementById("price").textContent = camera.price /100 + " ,00€"
+    cloneElt.getElementById("productLink").href += `?id=${camera._id}`
 
-    document.getElementById("articles__container").appendChild(cloneElt)
+    document.querySelector(".container__home").appendChild(cloneElt);
+    const containerHome = document.querySelector(".container__home");
+    if(containerHome){
+        showArticle();
+    }
+    
 }
+
+function showArticle () {
+    const hoverProducts = document.getElementsByClassName("card");
+    let links = document.querySelectorAll(".cardlink");
+
+    for(let i = 0; i < hoverProducts.length;i++) {
+        hoverProducts[i].addEventListener("mouseover", () => {
+            links[i].classList.add("showArticle");
+        })
+
+        hoverProducts[i].addEventListener("mouseout", () => {
+            links[i].classList.remove("showArticle");
+        })
+    }
+}
+
+function onLoadCartNumbers() {
+    let productNumbers = localStorage.getItem("cartNumbers")
+
+    if(productNumbers) {
+        document.querySelector("#spanCart").textContent = productNumbers;
+    }
+}
+onLoadCartNumbers();

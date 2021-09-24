@@ -1,23 +1,35 @@
+.section__cart-title {
+   
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 50px 0;
+   
+}
+
 .cart__container {  
-    margin: 0.5rem;
+    margin: 0.2rem;
     color: #000;
     justify-content: space-around;
     width: 100%;
-    padding: 10px;
+    padding: 5px;
     margin: 0;
-    
     &-title {
         width: 100%;
         display: flex;
         flex-flow: row nowrap;
         justify-content: flex-start;
+        align-items: center;
         border-bottom: 4px solid lightgrey;
 	    margin: 0 auto;
     }
 }
 
+#container-empty {
+    width: 95%;
+    height: 50px;
+}
 #cart-empty {
-    background-color: $border-color;
+    
     text-align: center;
     font-size: 2rem;
 }
@@ -36,70 +48,80 @@
 	border-bottom: 1px solid lightgrey;
 }
 
-
-.product-img {
-    width: 15%;
-    text-align: center;
-    padding: 0 10px;
-    margin: 10px 0;
+.productCart i {
+    color:#0065fc;
 }
-#img {
+.product-img {
+    width: 40%; 
+    padding-left: 20px ;
+}
+#imgCart {
     width: 15%;
     
 }
-.product-name {
-    width: 12%;
-    text-align: center;
-    padding: 0 10px;
-    margin: 10px 0;
-}
-#name {
+//  .product-name {
+//     width: 10%;
+//     text-align: center;
+//     padding: 0 10px;
+//     margin: 10px 0;
+//  }
+#nameCart {
+    width: 10%;
     font-size: 0.7rem;
 }
 
 .product-price {
 	width: 10%;
     color: #000;
-    text-align: center;
-    padding: 0 5px 0 8px;
-    margin: 10px 0;
+    display: flex;
+    justify-content: center;
 	
 }
-#price {
+#priceCart {
     font-size: 0.7rem;
 }
+
+#qty-group {
+    display: flex;
+    & i{
+        margin-right:5px;
+        margin-left: 5px;
+        color: #0065fc;
+    }
+}
 .product-qty {
-	width: 8%;
+	width: 20%;
 	text-align: center;
-    padding: 0 5px 0 5px;
-    margin: 10px 0;
+    display: flex;
+    justify-content: center;
 }
 .product-option {
-    width: 12%;
+    width: 15%;
     text-align: center;
-    padding: 0 8px 0 3px;
-    margin: 10px 0;
+    display: flex;
+    justify-content: center;
 }
-#option {
+#optionCart {
     font-size: 0.7rem;
 }
 .product-amount {
-	width: 12%;
-	text-align: center;
-    padding: 0 8px 0 3px;
-    margin: 10px 0;
+	width: 15%;
+	display: flex;
+    justify-content: center;
 }
-#amount {
+#amountCart {
     font-size: 0.7rem;
 }
-.total__amount {
-    background-color: $border-color;
+
+.container__total {
+    margin: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1rem;
     & p {
         font-weight: bold;
+        color: #0065fc;
     }
    
 }
@@ -118,7 +140,7 @@
     justify-content: flex-end;
 }
 .delete-cart {
-    @include button;
+   
     width: 40%;
     margin: 20px;
     display: flex;
