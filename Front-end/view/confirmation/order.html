@@ -23,57 +23,60 @@
                 
             </div>
             <nav>
-                <h2>Orinocam-Accueil</h2>
+                <h2>Orinocam- Confirmation de commande</h2>
                 <ul>
                     <li><a href="../../../index.html">Accueil</a></li>
                     <li><a href="#">A Propos</a></li>
                     <li class="cart">
                         <a href="../panier/panier.html" id="spanCart">
-                           
+                            
                         </a>
                     </li>
                 </ul>
             </nav>
         </header>
         <main id="main">
-            <div class="presentation">
-                <h1>Chez Orinoco, nous avons ce qu'il vous faut !</h1>
+            
+            <!-- contact -->
+            <div class="contact">
+                <p class="contact__text">Mes informations</p>
             </div>
-            <section class="articles__section">
-                <div class="container__articles">
-                   
-                       <div class="card">
-                        <div id="productLink" class="cardLink">
-                           <div class="card__img" id="imgCard"></div>
-                           <div class="card__name" id="name"></div>
-                           <div class="card__description" id="description"></div>
-                           <div class="card__price" id="price"></div>
-                           <div class="quantity__group">
-                            <select id="quantity" class="quantity__group-select" aria-label="Quantité">
-                                <option selected value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                           </div>
-                           <div class="card__options" id="contOptions">
-                            <label for="options" id="options__label">Personnalisez avec nos lentilles :</label>
-                                <select name="lentilles" id="options"> </select>                                                                        
-                           </div>
-                           <a href="#" class="add-cart">Ajouter au panier</a>
-                        </div>
-                       </div> 
-                    
+
+            <!-- Facture -->
+            <section class="facturation">
+                <h2 class="recapitulatif">Récapulatif de votre commande</h2>
+                <div class="productsCart">
+                    <table class="productsCart__table">
+                        <thead class="productsCart__title">
+                            <tr class="table__product-list-title">
+                                <th>Produit</th>
+                                <th>Nom</th>
+                                <th>Option</th>
+                                <th>Quantité</th>
+                                <th>Prix</th>
+                                <th>Sous total</th>
+                            </tr>
+                        </thead>
+                        <tbody class="cart__container" id="cart__container">
+                            <!-- insertion panier -->
+                        </tbody>
+                        
+                    </table>
+                    <div class="container__total" id="container__total">                   
+                        <p classe="total__amount-title">Montant de votre commande :</p> 
+                        <div id="total-amount"></div>                  
+                    </div>
                 </div>
-
-
             </section>
+            <div class="print">
+                <button id="print__Btn" class="print__Btn">Imprimer la commande</button>
+            </div>
+        </main>
 
 <!---------------------------------- Javascript ------------------------------->
             <script src="../../js/main.js"></script>
-            <script src="../../js/produit.js"></script>
-                        <!-- Bootstrap -->
+            <script src="../../js/order.js"></script>
+            <!-- Bootstrap -->
             <!-- JavaScript Bundle with Popper -->
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     </body>

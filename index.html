@@ -8,7 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">    
-
+    <!-- Bootstrap -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <!-- Lien vers FontAwesome-->
     <script src="https://kit.fontawesome.com/f15107843b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./Front-end/scss_to_css/main.css">
@@ -26,8 +28,8 @@
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="#">A Propos</a></li>
                     <li class="cart">
-                        <a href="./Front-end/view/panier/panier.html">
-                            <i class="fas fa-shopping-basket"></i>Panier<span id="spanCart">0</span>
+                        <a href="./Front-end/view/panier/panier.html" id="spanCart">
+                            
                         </a>
                     </li>
                 </ul>
@@ -39,22 +41,23 @@
             </div>
             <section class="home__section">
                 <div class="container__home">
-                    <template id="templateHome">
-                       <div class="card">
+                    <!-- <template id="templateHome"> -->
+                       
                         
-                           <img src="" alt="image du produit" class="card__img" id="imgCard">
-                           <h3 class="card__name" id="name"></h3>
-                           <p class="card__description" id="description"></p>
-                           <p class="card__price" id="price"></p>
-                           <a href="./Front-end/view/produit/produit.html" id="productLink" class="cardlink">Voir l'article</a>
-                       </div> 
-                    </template>
+                           
+                           
+                        
+                    <!-- </template> -->
                 </div>
 
 
             </section>
 
 <!---------------------------------- Javascript ------------------------------->
-            <script src="./Front-end/view/home/index.js"></script>
+            <script src="./Front-end/js/main.js"></script>
+            <script src="./Front-end/js/index.js"></script>
+                        <!-- Bootstrap -->
+            <!-- JavaScript Bundle with Popper -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     </body>
 </html>

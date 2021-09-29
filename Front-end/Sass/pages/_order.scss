@@ -1,0 +1,59 @@
+.contact {
+    width: 100%;
+    margin: 1rem;
+    padding: 3rem;
+    font-weight: bold;
+    &__text{
+        color: #0065fc;
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding: 1rem;
+    }
+}
+.recapitulatif {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #0065fc;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+.table__product {
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    &-list {
+        width: 100%;
+    }
+}
+.total {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 2rem;
+    &-cart {
+        width: 30%;
+    }
+   
+}
+.expedition__contact {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+}
+.print {
+    display: flex;
+    justify-content: flex-end;
+    margin : 2rem;
+    padding: 1rem;
+    &__Btn {
+        padding: 1rem;
+        border-radius: .8rem;
+        font-weight: bold;
+        &:hover {
+            background-color: #468820;
+            color: #fff;
+        }
+    }
+}

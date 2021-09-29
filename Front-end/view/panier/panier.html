@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">    
     <!-- bootstrap -->
-    
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <!-- Lien vers FontAwesome-->
     <script src="https://kit.fontawesome.com/f15107843b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../scss_to_css/main.css">
@@ -17,18 +18,15 @@
     </head>
     <body>
         <header>
-            
-            <div class="overlay">
-                
-            </div>
+            <div class="overlay"></div>
             <nav>
                 <h2>Orinocam-Panier</h2>
                 <ul>
                     <li><a href="../../../index.html">Accueil</a></li>
                     <li><a href="#">A Propos</a></li>
                     <li class="cart">
-                        <a href="cart.html">
-                            <i class="fas fa-shopping-basket"></i>Panier<span id="spanCart">0</span>
+                        <a href="panier.html" id="spanCart">
+                            
                         </a>
                     </li>
                 </ul>
@@ -39,59 +37,91 @@
                 <h1>Chez Orinoco, nous avons ce qu'il vous faut !</h1>
             </div>
 
-            <section class="section__cart">
-
-                <h2 class="section__cart-title">Votre Panier</h2>
-                            
-                <div class="cart__container-title">
-                    <h5 class="product-img"> PRODUIT</h5>
-                    <!-- <h5 class="product-name"> NOM</h5> -->
-                    <h5 class="product-price"> PRIX</h5>
-                    <h5 class="product-qty"> QTÉ</h5>
-                    <h5 class="product-option">OPTION</h5>
-                    <h5 class="product-amount">TOTAL</h5>
-                    <h5 class="trash-btn"> </h5> 
+            <section class="emptyCart">
+                <div class="container__empty">
+                    <h1 class="container__empty-text"> 
+                       Oups !  Votre panier est vide ! 
+                    </h1>
+                    <a role="button" href="../../../index.html" class="btn__home">Allez faire votre choix</a>
                 </div>
-    
-                <div class="cart__container" id="cart__container">
-                    <template id="templateCartEmpty">
-                        <div id="cart-empty"></div>
-                    </template>
-                
-    
-               
-                    <template id="templateCart" class="templateCart">                  
-                        <div class="productCart">
-                            <i class="fas fa-trash" id="trash-btn" class="trash"></i>
-                            <img src="" id="imgCart"/>
-                            <div id="nameCart"></div>
-                            <div id="priceCart"></div>
-                            <div id="qty-group">
-                                <i class="fas fa-caret-square-left decrease"></i>
-                                <span id="qtyCart"></span>
-                                <i class="fas fa-caret-square-right increase"></i>
-                            </div>
-                            <div id="optionCart"></div>
-                            <div id="amountCart"></div>
-                        </div>
-                    </template>
-                </div>
-    
-                <div class="container__total" id="container__total">
-                    <template id="templateTotalCart">
-                        <p classe="total__amount-title">Montant du panier :</p> 
-                        <div id="total-amount"></div>
-                    </template>
-                </div>
-    
-                <div class="container__delete-cart">
-                    <button type="submit" class="delete-cart">Vider le panier</button> 
-                </div>
-    
             </section>
 
-            <section class="commande">
-                <h2 class="purchase-title"></h2>
+            <section class="section__cart">
+                <h2 class="section__cart-title">Votre Panier</h2>
+                <div class="productsCart">             
+                    <table class="productsCart__table">
+                        <thead class="productsCart__title">
+                            <tr class="productsCart__tr">
+                                <th class="product-img"> PRODUIT</th>
+                                <!-- <th class="product-name"> NOM</th> -->
+                                <th class="product-option">OPTION</th>
+                                <th class="product-price"> PRIX</th>
+                                <th class="product-qty"> QTÉ</th>
+                                
+                                <th class="product-amount">TOTAL</th> 
+                            </tr>
+                        </thead>
+                        <tbody class="cart__container" id="cart__container">
+                            <!-- panier -->
+                        </tbody>
+                    </table>   
+                    
+                        
+                    <div class="container__total" id="container__total">                   
+                        <p classe="total__amount-title">Montant du panier :</p> 
+                        <div id="total-amount"></div>                  
+                    </div>
+
+                    <div class="hideButtons">
+                        <div class="validate">
+                            <button type="submit" class="validate-cart">Valider le panier</button> 
+                        </div>
+            
+                        <div class="container__delete-cart">
+                            <button type="submit" class="delete-cart">Vider le panier</button> 
+                        </div>
+                    </div>
+                </div>
+            </section>
+<!---------------------- Formulaire de COMMANDE ----------------------->
+            <section class="purchase">
+                
+                <div class="orderForm">
+                    <h2 class="purchase-title"></h2>
+                    <p class="information">
+                        Merci de remplir les champs obligatoire de ce formulaire, pour passer commande
+                    </p>
+                    <form action="" id="orderFormValidity">
+                        <div class="firstName">
+                            <label for="firstName">Prénom</label>
+                            <input type="text" class="firstName__form" id="firstName" placeholder="Ex: Alex" pattern="^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+))$" required>
+                        </div>
+                        <div class="lastName">
+                            <label for="lastName">Nom</label>
+                            <input type="text" class="lastName__form" id="lastName" placeholder="Ex: Térieur" pattern="^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+))$" required>
+                        </div>
+                        <div class="email">
+                            <label for="email">Email</label>
+                            <div class="email__form">
+                                <span class="email__form-i">@</span>
+                                <input type="email" class="email__form-input" id="email" placeholder="Ex: alexterieur@mail.com" pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]{2,}\.[a-z]{2,4}$" required>
+                            </div>
+                        </div>
+                        <div class="address">
+                            <label for="address">Adresse</label>
+                            <input type="text" class="address__form" id="address" placeholder="1 rue des photographes" pattern="^(([a-zA-ZÀ-ÿ0-9]+[\s\-]{1}[a-zA-ZÀ-ÿ0-9]+)){1,10}$" required>
+                        </div>
+                        <div class="city">
+                            <label for="city">Ville</label>
+                            <input type="text" class="city__form" id="city" placeholder="Paris" pattern="^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+)){1,10}$" required>
+                        </div>
+                        
+                    </form>
+                    <div class="order__btn">
+                        <button type="submit" class="order__btn-submit" id="order">Envoyer votre commande</button>
+                    </div>
+
+                </div>
 
 
             </section>
@@ -99,7 +129,11 @@
         </main>
         <!-- Optional JavaScript -->
         
-        <script src="./panier.js"></script>
+        <script src="../../js/main.js"></script>
+        <script src="../../js/panier.js"></script>
+                    <!-- Bootstrap -->
+            <!-- JavaScript Bundle with Popper -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     </body>
 </html>      
        
