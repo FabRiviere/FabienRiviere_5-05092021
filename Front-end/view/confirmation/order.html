@@ -13,6 +13,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <!-- Lien vers FontAwesome-->
     <script src="https://kit.fontawesome.com/f15107843b.js" crossorigin="anonymous"></script>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../../img/favicon_Orinocam.png" type="image/x-icon">
+    <!-- style CSS -->
     <link rel="stylesheet" href="../../scss_to_css/main.css">
     <title>Orinoco - Accueil</title>
     </head>
@@ -23,7 +26,11 @@
                 
             </div>
             <nav>
-                <h2>Orinocam- Confirmation de commande</h2>
+                <img src="../../img/logo_Orinocam-nav.png" alt="Logo du site Orinocam" class="logo">
+                <div class="title">
+                    <h1>Orinocam</h1>
+                    <h2>Confirmation de commande</h2>
+                </div>
                 <ul>
                     <li><a href="../../../index.html">Accueil</a></li>
                     <li><a href="#">A Propos</a></li>
@@ -38,10 +45,12 @@
         <main id="main">
             
             <!-- contact -->
-            <div class="contact">
-                <p class="contact__text">Mes informations</p>
-            </div>
-
+           
+                <div class="contact">
+                    
+                    <p class="contact__text">Mes informations</p>
+                </div>
+            
             <!-- Facture -->
             <section class="facturation">
                 <h2 class="recapitulatif">Récapulatif de votre commande</h2>
@@ -64,7 +73,7 @@
                     </table>
                     <div class="container__total" id="container__total">                   
                         <p classe="total__amount-title">Montant de votre commande :</p> 
-                        <div id="total-amount"></div>                  
+                        <p id="total-amount"></p>                  
                     </div>
                 </div>
             </section>

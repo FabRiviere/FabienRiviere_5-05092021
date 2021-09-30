@@ -66,14 +66,11 @@ if (cart.length < 1) {
         onLoadCartNumbers();
     }
 
-    function clearLocalStorage() {
-        localStorage.clear();
-    }
-    
-    // Fonction pour vide le panier avec le bouton
-    const btnDeleteCart = document.querySelector(".delete-cart");
+        
+    // Fonction pour vider le panier avec le bouton
+    const btnDeleteCart = document.querySelector("#clearCart");
     btnDeleteCart.addEventListener("click", () => {
-        clearLocalStorage();
+        clearCart();
         location.reload();
     })
     

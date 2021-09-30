@@ -1,13 +1,28 @@
 .contact {
-    width: 100%;
-    margin: 1rem;
-    padding: 3rem;
+    border-width: .7rem;
+    border-style: ridge;
+    width: 95%;
+    background-color: $color-primary;
+    margin: .6rem;
+    padding: 2rem;
     font-weight: bold;
+    color: $color-tertiary;
+    & p.thank {
+        color: #468820;
+        font-size: 1.3rem;
+    }
+    & p.orderId {
+       
+        color: #999;
+    }
     &__text{
         color: #0065fc;
         font-size: 1.5rem;
         font-weight: bold;
         padding: 1rem;
+    }
+    & span {
+        color: rgb(243, 136, 13);
     }
 }
 .recapitulatif {
@@ -27,20 +42,32 @@
         width: 100%;
     }
 }
-.total {
+#container__total {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
-    margin: 2rem;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 1.5rem 0;
     &-cart {
         width: 30%;
     }
    
 }
+
 .expedition__contact {
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-end;
+    border-style: groove;
+    border-width: 0.2rem;
+    border-color: rgb(212,175,55);
+    border-radius: 1.2rem;
+    box-shadow: .3rem .3rem .6rem #999;
+    padding: .5rem 2rem;
+    color:rgb(243, 136, 13);
+    & p.expedition {
+        color:$color-tertiary;
+    }
 }
 .print {
     display: flex;
@@ -51,6 +78,13 @@
         padding: 1rem;
         border-radius: .8rem;
         font-weight: bold;
+        border-style: groove;
+        border-width: 0.4rem;
+        border-color: rgb(212,175,55);
+        border-radius: 1.2rem;
+        box-shadow: .3rem .3rem .6rem #999;
+        background-color: $color-primary;
+        color: #468820;
         &:hover {
             background-color: #468820;
             color: #fff;

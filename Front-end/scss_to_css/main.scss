@@ -5,6 +5,8 @@
 
 //components
 @import "../Sass/components/button";
+@import "../node_modules/bootstrap/scss/modal";
+
 //layout
 @import "../Sass/layout/header";
 //pages
@@ -12,3 +14,6 @@
 @import "../Sass/pages/produit";
 @import "../Sass/pages/panier";
 @import "../Sass/pages/order";
+
+//vendors
+// @import "../node_modules/bootstrap/scss/bootstrap.scss";

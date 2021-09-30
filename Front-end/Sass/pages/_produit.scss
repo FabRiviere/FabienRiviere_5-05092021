@@ -2,8 +2,8 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 50px auto 0;
-    padding-bottom: 100px;;
+    margin: 0;
+    padding-bottom: 3rem;;
 }
 
 a {
@@ -15,8 +15,11 @@ a {
     margin: 20px;
     position: relative;
     overflow: hidden;
-    border: 2px solid #f2f2f2;
-    border-radius: 10px 10px 0 0;
+    border-style: ridge;
+    border-width: 15px;
+    border-color: rgb(141, 135, 135);
+    border-radius: 35px  0 35px 0 ;
+    box-shadow: 5px 5px 10px #999;
     &__img {
         width: 100%;
         
@@ -25,6 +28,9 @@ a {
     &__name {
         text-align: center;
         padding: 10px;
+        color:  rgb(212,175,55);
+        font-size: 2rem;
+        text-shadow: 2px 2px 2px #666;
     }
     &__description {
         text-align: center;
@@ -34,30 +40,111 @@ a {
     &__price {
         text-align: right;
         padding: 10px;
+        color: rgb(104, 103, 103);
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-shadow: 5px 5px 10px rgb(202,202,202);
+    }
+}
+.quantity__group {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: .2rem 2rem;
+    margin-bottom: 1rem;
+    &-text{
+        font-weight: bold;
+        color: rgb(81, 204, 235);
+        padding: 0 2rem;
+        margin: 0;
+    }
+    &-select {
+        width: 30%;
+        text-align: center;
+        color: rgb(81, 204, 235);
+        font-weight: bold;
+        border-style: ridge;
+        border-width: 5px;
+        border-color: rgb(81, 204, 235);
+        border-radius: .5rem ;
+        box-shadow: 5px 5px 10px #999;
     }
 }
 
-
 .add-cart {
+    
     position: absolute;
     width: 100%;
-    height: 100px;
-    background-color: darkgrey;
+    height: 130px;
+    background-color: rgb(202,202,202);
     transition: all 0.3s ease-in-out;
     opacity: 0;
     cursor: pointer;
-    text-align: center;
-    
-    font-size: 2.5rem;
+    border-style: ridge;
+    border-width: 5px;
+    border-color: rgb(141, 135, 135);
+    border-radius: 1.5rem;
+    box-shadow: 5px 5px 10px #999;
+    font-size: 2rem;
     font-weight: bold;
+    &:hover {
+        background-color: rgb(40, 144, 58);
+        color: #fff;
+        border-color: rgb(245, 49, 49);
+        &#add-cart {
+            color: #fff;
+        }
+    }
+}
+#add-cart {
+    font-size: 2rem;
+    font-weight: bold;
+    color:rgb(56, 40, 144);
+    &:hover {
+        color:#fff;
+        border-color: rgb(245, 49, 49);
+        border-style: ridge;
+        border-width: 5px;
+        border-radius: 1rem;
+    }
 }
 
 .showcart { 
-    bottom: 230px;
+    bottom: 300px;
     opacity: 1;
     padding: 10px;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+
+  .card__options {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+#options {
+    text-align: center;
+    padding: .3rem 1rem;
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+    color: rgb(40, 144, 58);
+    font-weight: bold;
+    border-style: ridge;
+    border-width: 5px;
+    border-color: rgb(40, 144, 58);
+    border-radius: .5rem ;
+    box-shadow: 5px 5px 10px #999;
+    &__label {
+        font-size: 1rem;
+        padding: 1rem;
+        color: rgb(40, 144, 58);
+    }
+
+}
 
 
   /* **************** MEDIA QUERIES */
@@ -68,8 +155,11 @@ a {
         margin: 20px;
         position: relative;
         overflow: hidden;
-        border: 2px solid #f2f2f2;
-        border-radius: 20px 20px 0 0;
+        border-style: ridge;
+        border-width: 15px;
+        border-color: rgb(141, 135, 135);
+        border-radius: 35px 35px 0 0;
+        box-shadow: 5px 5px 10px #999;
         &__img {
             width: 100%;
             border-radius: 20px 20px 0 0;

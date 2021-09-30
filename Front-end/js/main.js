@@ -98,8 +98,8 @@ function onLoadCartNumbers() {
     
 }
 
-// Fonction pour vider le localStorage : 
-function clearLocalStorage() {
+// Fonction pour vider le panier : 
+function clearCart() {
     localStorage.clear();
 }
 

@@ -1,7 +1,6 @@
 //Actualisation du nombre d'article ds l'icone du panier ds le header
 onLoadCartNumbers();
 // const nécéssaire pr récupération produits
-let btnAddCart = document.querySelectorAll(".add-cart");
 // récupération de l'id du produit
 const searchParams = new URLSearchParams(location.search);
 const newId = searchParams.get('_id');
@@ -122,7 +121,7 @@ fetch(newUrl)
        
     }
     
-     btnAddCart = document.querySelector(".add-cart");
+    let btnAddCart = document.getElementById("add-cart");
     btnAddCart.addEventListener("click", (e) => {
         e.preventDefault();
         let option = document.getElementById("options");
