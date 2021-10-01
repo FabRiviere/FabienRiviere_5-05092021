@@ -10,20 +10,20 @@ a {
     text-decoration: none;
 }
 
-.card  { 
-    width: 80vw;
-    margin: 20px;
+.cardProduct  { 
+    width: 80%;
+    margin: 1.2rem;
     position: relative;
     overflow: hidden;
     border-style: ridge;
-    border-width: 15px;
+    border-width: 1rem;
     border-color: rgb(141, 135, 135);
-    border-radius: 35px  0 35px 0 ;
-    box-shadow: 5px 5px 10px #999;
+    border-radius: 2rem  0 2rem 0 ;
+    box-shadow: .3rem .3rem .6rem #999;
     &__img {
         width: 100%;
         
-        border-radius: 10px 10px 0 0;
+        border-radius: 1rem 0 0 0 ;
     }
     &__name {
         text-align: center;
@@ -98,6 +98,7 @@ a {
     }
 }
 #add-cart {
+    
     font-size: 2rem;
     font-weight: bold;
     color:rgb(56, 40, 144);
@@ -105,13 +106,13 @@ a {
         color:#fff;
         border-color: rgb(245, 49, 49);
         border-style: ridge;
-        border-width: 5px;
+        border-width: .3rem;
         border-radius: 1rem;
     }
 }
 
 .showcart { 
-    bottom: 300px;
+    bottom: 16rem;
     opacity: 1;
     padding: 10px;
     text-decoration: none;
@@ -140,7 +141,7 @@ a {
     box-shadow: 5px 5px 10px #999;
     &__label {
         font-size: 1rem;
-        padding: 1rem;
+        padding: .8rem;
         color: rgb(40, 144, 58);
     }
 
@@ -148,59 +149,35 @@ a {
 
 
   /* **************** MEDIA QUERIES */
-  @media screen and (min-width:1200px){
+  @media screen and (min-width:768px){
 
-    .card  { 
-        width: 40vw;
-        margin: 20px;
-        position: relative;
-        overflow: hidden;
-        border-style: ridge;
-        border-width: 15px;
-        border-color: rgb(141, 135, 135);
-        border-radius: 35px 35px 0 0;
-        box-shadow: 5px 5px 10px #999;
-        &__img {
-            width: 100%;
-            border-radius: 20px 20px 0 0;
-        }
-        &__name {
-            text-align: center;
-            padding: 20px;
-            font-size: 2rem;
-        }
-        &__description {
-            text-align: center;
-            padding: 20px;
-            color: #000;
-            font-size: 1.5rem;
-        }
-        &__price {
-            text-align: right;
-            padding: 20px;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: green;
-        }
+    .card__description{
+        font-size: 1.5rem;
     }
-    .card__options {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
-    }
-    #options {
+     #options {
         text-align: center;
-        padding: 20px 40px;
-        margin-bottom: 20px;
-        font-size: 1rem;
+        padding: 1.2rem 2.2rem;
+        margin-bottom: 1.2rem;
+        font-size: 1.5rem;
         color: blue;
         font-weight: bold;
         &__label {
-            font-size: 1.2rem;
-            padding:20px;
+            font-size: 1.5rem;
+            padding: 1.2rem;
         }
 
     }
+    .quantity__group {
+        font-size: 1.5rem;
+    }
+    .showcart { 
+        bottom: 22rem;
+    }
       
   }
+
+//   -----------MEDIA Queries
+
+@media screen and (min-width: 768px) {
+
+}

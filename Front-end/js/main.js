@@ -41,20 +41,20 @@ function displayCart(product) {
     const indexProduct = cart.indexOf(product);
     const productList = document.querySelector(".cart__container");
     productList.innerHTML += `
-                                <tr class="productList">
-                                    <td class="trash">
+                                <tr class="productList text-center">
+                                    <td class="trash align-midle">
                                         <i class="fas fa-trash" id="trash-btn" class="trash" onclick="remove(${indexProduct})"></i>
                                     </td>
-                                    <td class="imgCart">
-                                        <img src="${product.imgUrl}" class="imgCart" id="imgCart" alt="photo de l'article ${product.name}">
+                                    <td class="imgCart w-25">
+                                        <img src="${product.imgUrl}" class="imgCart img-fluid img-thumbnail" id="imgCart" alt="photo de l'article ${product.name}">
                                     </td>
-                                    <td class="nameCart">
+                                    <td class="nameCart align-midle">
                                         <span class="nameCart">${product.name}</span>
                                     </td>
-                                    <td class="optionCart">
+                                    <td class="optionCart align-midle">
                                         <span class="optionCart">${product.option}</span>
                                     </td>
-                                    <td class="priceCart">
+                                    <td class="priceCart align-midle">
                                         <span class="priceCart">${convertPrice(product.price)}</span>
                                     </td>
                                     <td class="align-middle qty-group">
@@ -66,7 +66,7 @@ function displayCart(product) {
                                         <span class="fas fa-plus-square text-success" data-index="${indexProduct}"></span>
                                     </button>
                                     </td>
-                                    <td class="amountCart">
+                                    <td class="amountCart align-midle">
                                         <span id="amountCart" class="amountCart">${convertPrice(product.quantity * product.price)}</span>
                                     </td>
                                 </tr>                               

@@ -91,3 +91,31 @@
         }
     }
 }
+
+// ---------------------------Media Queries
+@media screen and (min-width: 768px) {
+    main {
+    padding: 1.5rem;
+    }
+    .contact {
+        font-size: 1.2rem;
+    }
+    .facturation{
+        padding: 3rem;
+    }
+    
+}
+
+
+@media screen and (min-width: 1440px) {
+    main {
+    padding: 2rem;
+    }
+    .contact {
+        font-size: 1.5rem;
+    }
+    .facturation{
+        padding: 4rem;
+    }
+    
+}

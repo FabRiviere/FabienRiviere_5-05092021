@@ -23,34 +23,41 @@ a {
     background-color: $color-primary;
 }
 
-// .card  { 
-//     width: 80vw;
-//     margin: 20px;
-//     position: relative;
-//     overflow: hidden;
-//     border-style: ridge;
-//     border-width: 15px;
-//     border-color: rgb(141, 135, 135);
-//     border-radius: 3rem 3rem 0 0;
-//     box-shadow: 5px 5px 10px #999;
-//     &__img {
-//         width: 100%;
-//         border-radius: 3rem 3rem 0 0;
-//     }
-//     &__name {
-//         text-align: center;
-//         padding: 10px;
-//     }
-//     &__description {
-//         text-align: center;
-//         padding: 10px;
-//         color: #000;
-//     }
-//     &__price {
-//         text-align: right;
-//         padding: 10px;
-//     }
-// }
+.card  { 
+    width: 80vw;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border-style: ridge;
+    border-width: 15px;
+    border-color: rgb(141, 135, 135);
+    border-radius: 2rem  0 2rem 0 ;
+    box-shadow: .3rem .3rem .6rem #999;
+    &__img {
+        width: 100%;
+        border-radius: 1rem 0 0 0 ;
+    }
+    &__name {
+        text-align: center;
+        padding: 10px;
+        color:  rgb(212,175,55);
+        font-size: 2rem;
+        text-shadow: 2px 2px 2px #666;
+    }
+    &__description {
+        text-align: center;
+        padding: 10px;
+        color: #000;
+    }
+    &__price {
+        text-align: right;
+        padding: 10px;
+        color: rgb(104, 103, 103);
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-shadow: 5px 5px 10px rgb(202,202,202);
+    }
+}
 
 
 .cardlink {
@@ -76,11 +83,58 @@ a {
 }
 
 .showArticle { 
-    bottom: 100px;
+    bottom: 5.7rem;
     opacity: 1;
     padding: 10px;
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+//   -----------------------------MEDIA QUERIES---------------------------
+
+  @media screen and (min-width: 768px) {
+      
+    .container__home{
+        flex-flow: row wrap;
+    }
+    
+    .card {
+        width: 40vw;
+        margin: 20px;
+        position: relative;
+        overflow: hidden;
+        border-style: ridge;
+        border-width: 1rem;
+        border-color: rgb(141, 135, 135);
+        border-radius: 2rem 0 2rem 0;
+        box-shadow: 5px 5px 10px #999;
+        &__img {
+            width: 100%;
+            
+            border-radius: 1rem 0 0 0;
+        }
+        &__name {
+            text-align: center;
+            padding: 1.2rem;
+            font-size: 2rem;
+        }
+        &__description {
+            text-align: center;
+            padding: 1.2rem;
+            color: #000;
+            font-size: 1rem;
+        }
+        &__price {
+            text-align: right;
+            padding: 1.2rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            
+        }
+      }
+    .showArticle { 
+    bottom: 7rem;
+    }
   }

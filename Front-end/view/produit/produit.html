@@ -49,7 +49,7 @@
             <section class="articles__section">
                 <div class="container__articles">
                    
-                       <div class="card">
+                       <div class="card cardProduct">
                         <div id="productLink" class="cardLink">
                            <div class="card__img" id="imgCard"></div>
                            <div class="card__name" id="name"></div>
@@ -75,7 +75,15 @@
                                 Ajouter au panier
                               </button>
                             </div>
-
+                            <div class="toast show position-absolute top-50 start-50 translate-middle bg-danger" id="myToast" hidden>
+                              <div id="liveToast" role="alert" aria-live="assertive" aria-atomic="true">
+                                  <div class="d-flex my-2">
+                                      <div class="toast-body me-auto py-0 text-white" id="message">
+                                      </div>
+                                      <button type="button" class="btn-close btn-close-white me-2" data-bs-dismiss="toast" aria-label="Close" id="closeToast"></button>
+                                  </div>
+                              </div>
+                          </div>
                         </div>
 
                         
@@ -104,7 +112,36 @@
                     </div>
                 </div>
             </div>
-
+        </main>
+        <footer class="footer">
+            <div class="group-firm">
+              <img src="../../img/logo_Orinocam-nav.png" alt="logo de Orinocam"/>
+                is a <i class="fas fa-baby"></i> of group 
+              <img src="../../img/logo_Orinoco-nav.png" alt="">
+            </div>
+            <div id="footer-socials">
+              <a href="#" target="_blank" title="Facebook" class="socials-item">
+                <i class="fab fa-facebook-f facebook"></i>
+              </a>
+              <a href="#" target="_blank" title="Twitter" class="socials-item">
+                <i class="fab fa-twitter twitter"></i>       
+              </a>
+              <a href="#" target="_blank" title="Instagram" class="socials-item">
+                <i class="fab fa-instagram instagram"></i>
+              </a>
+              <a href="#" target="_blank" title="YouTube" class="socials-item">
+                <i class="fab fa-youtube youtube"></i>
+              </a>
+              <a href="#" target="_blank" title="Telegram" class="socials-item">
+                <i class="fab fa-telegram telegram"></i>
+              </a>
+            </div>
+            <div class="footer-bottom">   
+              <div class="footer-site-info">2021 © <a href="https://activateurweb.com" target="_blank">Activateur Web </a></div>   
+            </div>
+              </footer>
+            </div>
+          </footer>
 <!---------------------------------- Javascript ------------------------------->
             <script src="../../js/main.js"></script>
             <script src="../../js/produit.js"></script>

@@ -1,0 +1,50 @@
+footer {
+    background-color: rgba(10,10,10,0.3);
+    padding: 1rem;
+}
+
+.footer-bottom {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin-top: .5rem;
+    font-size: .8rem;
+}
+.footer-site-info {
+    width: 50%;
+    text-align: center;
+    color: $color-secondary;
+    & a{
+        color: $color-secondary;
+    }
+}
+
+#footer-socials {
+    width: 100%;
+    display: flex;
+   justify-content: center;
+}
+.socials-item {
+    font-size: 1.5rem;
+    color: $color-tertiary;
+    padding: 0 .5rem;
+}
+.group-firm img {
+    width: 20%;
+    margin: 0 .2rem;
+    border-radius: .3rem;
+}
+.group-firm {
+    width: 100%;
+    padding: 1rem .2rem;
+    color: $color-primary;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    & i {
+        font-size: 1.8rem;
+        
+    }
+}
+
