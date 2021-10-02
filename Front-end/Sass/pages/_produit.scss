@@ -47,31 +47,71 @@ a {
     }
 }
 .quantity__group {
-    width: 100%;
+    width: 80%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: .2rem 2rem;
+    padding: .2rem 1rem;
     margin-bottom: 1rem;
     &-text{
         font-weight: bold;
         color: rgb(81, 204, 235);
-        padding: 0 2rem;
+        padding: 0 1rem;
         margin: 0;
     }
-    &-select {
-        width: 30%;
-        text-align: center;
-        color: rgb(81, 204, 235);
-        font-weight: bold;
-        border-style: ridge;
-        border-width: 5px;
-        border-color: rgb(81, 204, 235);
-        border-radius: .5rem ;
-        box-shadow: 5px 5px 10px #999;
-    }
-}
 
+    // & input {
+    //     width: 50%;
+    //     text-align: center;
+    //     color: rgb(81, 204, 235);
+    //     font-weight: bold;
+    //     border-style: ridge;
+    //     border-width: .3rem;
+    //     border-color: rgb(81, 204, 235);
+    //     border-radius: .5rem ;
+    //     box-shadow: 5px 5px 10px #999;
+    // }
+}
+// #quantity-group-select {
+//     width: 30%;
+//     text-align: center;
+//     color: rgb(81, 204, 235);
+//     font-weight: bold;
+//     border-style: groove;
+//     border-width: .3rem;
+//     border-color: rgb(81, 204, 235);
+//     border-radius: .5rem ;
+//     box-shadow: .3rem .3rem .6rem #999;
+       
+//     }
+#quantity {
+    // border: none;
+    // background-color: transparent;
+    width: 30%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: rgb(81, 204, 235);
+    font-weight: bold;
+    border-style: groove;
+    border-width: .3rem;
+    border-color: rgb(81, 204, 235);
+    border-radius: .5rem ;
+    box-shadow: .3rem .3rem .6rem #999;
+}
+// // #btn-vertical {
+// //     display: flex;
+// //     flex-flow: column nowrap;
+// //     margin: 0;
+// //     padding: 0;
+// //     color: rgb(81, 204, 235);
+// //     font-weight: bold;
+// // }
+
+// // .input-group {
+// //     display: flex;
+// //     flex-flow: ;
+// // }
 .add-cart {
     
     position: absolute;
@@ -112,7 +152,7 @@ a {
 }
 
 .showcart { 
-    bottom: 16rem;
+    bottom: 18.2rem;
     opacity: 1;
     padding: 10px;
     text-decoration: none;
@@ -178,6 +218,6 @@ a {
 
 //   -----------MEDIA Queries
 
-@media screen and (min-width: 768px) {
+// @media screen and (min-width: 768px) {
 
-}
+// }

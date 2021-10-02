@@ -43,6 +43,6 @@ print.addEventListener("click", (e) => {
     e.preventDefault;
     window.print();
     // vider le localStorage ? 
-    // clearCart();
+    clearCart();
     location.reload();
 });

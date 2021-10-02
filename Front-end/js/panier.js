@@ -93,6 +93,7 @@ if (cart.length < 1) {
     const regexMail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]{2,}\.[a-z]{2,4}$/;
     const regexAddress = /^(([a-zA-ZÀ-ÿ0-9]+[\s\-]{1}[a-zA-ZÀ-ÿ0-9]+)){1,10}$/;
     
+
     order.addEventListener("click", (event) =>{
     // On rassemble les informations du formulaire de contact
         let contact = {
