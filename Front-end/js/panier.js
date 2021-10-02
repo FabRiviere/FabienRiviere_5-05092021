@@ -162,7 +162,7 @@ if (cart.length < 1) {
                 .then((response) => response.json())
                 .then((data) => {
                     localStorage.setItem("order", JSON.stringify(data));
-                    document.location.href = "../confirmation/order.html";
+                    document.location.href = "../view/order.html";
                 })
                 .catch((erreur) => console.log("erreur :" + erreur));
     

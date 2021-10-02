@@ -4,14 +4,6 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
-
-/*
-.img_logo {
-    width: 25%;
-    position: absolute;
-    top: 42px;
-    left: 10px;
-} */
 header {
     width: 100%;
     background-repeat: no-repeat;
@@ -20,7 +12,6 @@ header {
     height: 18rem;
     position: relative;
 }
-
 .overlay {
     position: absolute;
     z-index: 1;
@@ -33,7 +24,6 @@ header {
     margin: 0 !important;
     background-color: rgba(10,10,10,0.3);
 }
-
 nav {
     width: 100%;
     position: absolute;
@@ -55,7 +45,6 @@ nav {
     font-weight: bold;
     text-align: center;
 }
-
 nav ul {
     width: 100%;
     display: flex;
@@ -67,8 +56,6 @@ nav ul {
 nav li {
     list-style: none;
     display: flex;
-    // padding-right: .5rem;
-    // padding-left: .5rem;
     margin-top: .2rem;
     border-style: ridge;
     border-width: 0.2rem;
@@ -76,11 +63,9 @@ nav li {
     border-radius: 1.2rem;
     box-shadow: .3rem .3rem .6rem #999;
 }
-
 nav li span {
     padding-left: 5px;
 }
-
 li a {
     padding: .5rem;
     background-color: #fff;
@@ -88,13 +73,10 @@ li a {
     font-size: 1.2rem;
     border-radius: 1rem;
 }
-
 .cart i {
-    
     font-size: 1.2rem;
     padding-right: 5px;
  }
- 
 .cart a {
     background-color: royalblue;
     display: flex;
@@ -103,8 +85,6 @@ li a {
     color: #fff;
     cursor: pointer;
     text-decoration: none;
-    // padding: .5rem;
-    // border-radius: 1rem;
 }
 .spanCart {
     width: 33%;
@@ -115,14 +95,9 @@ li a {
     color: rgb(253, 2, 2);
     border-radius: 1rem;
 }
-
-// -----------------MEDIA QUERIES-------------
-
-@media screen and (min-width: 768px) {
-
-    
-     nav ul {
-         
+/* -----------------MEDIA QUERIES------------- */
+@media screen and (min-width: 768px) {  
+     nav ul {        
         display: flex;
         justify-content: flex-end;
     }

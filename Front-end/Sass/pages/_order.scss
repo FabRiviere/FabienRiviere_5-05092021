@@ -11,8 +11,7 @@
         color: #468820;
         font-size: 1.3rem;
     }
-    & p.orderId {
-       
+    & p.orderId {     
         color: #999;
     }
     &__text{
@@ -50,10 +49,8 @@
     margin: 1.5rem 0;
     &-cart {
         width: 30%;
-    }
-   
+    } 
 }
-
 .expedition__contact {
     display: flex;
     flex-flow: column nowrap;
@@ -91,8 +88,7 @@
         }
     }
 }
-
-// ---------------------------Media Queries
+/* ---------------------------Media Queries---------------- */
 @media screen and (min-width: 768px) {
     main {
     padding: 1.5rem;
@@ -102,11 +98,9 @@
     }
     .facturation{
         padding: 3rem;
-    }
-    
+    }  
 }
-
-
+/*---------------- MQ 1440px--------------- */
 @media screen and (min-width: 1440px) {
     main {
     padding: 2rem;
@@ -117,5 +111,4 @@
     .facturation{
         padding: 4rem;
     }
-    
 }

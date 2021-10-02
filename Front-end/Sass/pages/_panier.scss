@@ -5,7 +5,6 @@
         justify-content: center;
     }  
 }
-
 .cart__container {  
     margin: 0.2rem;
     color: #000;
@@ -28,7 +27,6 @@
     font-weight: bold;
 }
 td {
-    
     display: flex;
     justify-content: flex-start; 
 }
@@ -58,8 +56,7 @@ td {
         background-color: rgb(40, 144, 58);
         color: #fff;
         border-color: rgb(245, 49, 49);
-    }
-    
+    } 
 }
 .btn__home {
         background-color: $color-secondary;
@@ -74,7 +71,6 @@ td {
         padding: .2rem 1rem;
         color: $color-tertiary;
     }
-
 .productsCart {
     width: 100%;
     display: flex;
@@ -105,7 +101,6 @@ td {
 	padding: .6rem .3rem;
 	border-bottom: 1px solid lightgrey;
 }
-
 .productCart i {
     color:#0065fc;
     cursor: pointer;
@@ -119,8 +114,7 @@ td {
     width: 15%;
     & td {
         height: 100%;
-    }
-    
+    }  
     & img {
         width: 100%;  
         height: 100%;     
@@ -170,7 +164,6 @@ td {
 .product-qty {
 	width: 20%;
 	text-align: center;
-   
 }
 .product-option {
     width: 15%;
@@ -279,8 +272,7 @@ td {
 }
 .firstName {
     width: 80%;
-    margin-top: 2rem;
-    
+    margin-top: 2rem;   
     &__form {
         width: 100%;
         font-size: 1rem;
@@ -440,8 +432,7 @@ label {
     width: 100%;
     margin-top: 2rem;
     display: flex;
-    justify-content: flex-end; 
-    
+    justify-content: flex-end;   
     &-submit {
         width: 60%;
         color: #0065fc;
@@ -460,11 +451,8 @@ label {
         }
     }
 }
-
-//   -----------------------------MEDIA QUERIES---------------------------
-
+/*   -----------------------------MEDIA QUERIES--------------------------- */
 @media screen and (min-width: 768px) {
-
     .imgCart {
         width: 30%;
     }
@@ -501,11 +489,8 @@ label {
         font-size: 1.5rem;
     }
 }
-
-
-// ----------- Media Queries 1024px---------
+/* ----------- Media Queries 1024px---------*/
 @media screen and (min-width: 1024px) {
-
     th.product-img {
         width: 60%;
     }
@@ -534,8 +519,7 @@ label {
         font-size: 2rem;
     }
     #orderFormValidity {
-       flex-flow: row wrap;
-       
+       flex-flow: row wrap;    
     }
     .firstName {
         width:45%;
@@ -553,7 +537,7 @@ label {
         width: 45%;
     }
 }
-
+/* ----------- Media Queries 1440px---------  */
 @media screen and (min-width: 1440px) {
     .section__cart{
         padding: 4rem;

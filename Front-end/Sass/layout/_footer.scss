@@ -2,7 +2,6 @@ footer {
     background-color: rgba(10,10,10,0.3);
     padding: 1rem;
 }
-
 .footer-bottom {
     width: 100%;
     display: flex;
@@ -19,7 +18,6 @@ footer {
         color: $color-secondary;
     }
 }
-
 #footer-socials {
     width: 100%;
     display: flex;
@@ -43,8 +41,6 @@ footer {
    align-items: center;
    justify-content: center;
     & i {
-        font-size: 1.8rem;
-        
+        font-size: 1.8rem;     
     }
 }
-

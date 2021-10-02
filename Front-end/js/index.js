@@ -27,7 +27,7 @@ fetch(url)
                                     <h3 class="card__name" id="name">${product.name}</h3>
                                     <p class="card__description" id="description">${product.description}</p>
                                     <p class="card__price" id="price">${price}</p>
-                                    <a href="./Front-end/view/produit/produit.html?_id=${product._id}" id="productLink" class="cardlink">Voir l'article</a>
+                                    <a href="./Front-end/view/produit.html?_id=${product._id}" id="productLink" class="cardlink">Voir l'article</a>
                                 </div>
                             `;
                             
