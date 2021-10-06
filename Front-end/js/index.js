@@ -1,6 +1,6 @@
 
 
-//Appel de l'adresse URL de l'API
+//Appel de l'adresse URL de l'API et récupération des données en json par retour des promesses
 fetch(url)
     .then((response) => response.json())
     .then((data) => {
@@ -29,8 +29,7 @@ fetch(url)
                                     <p class="card__price" id="price">${price}</p>
                                     <a href="./Front-end/view/produit.html?_id=${product._id}" id="productLink" class="cardlink">Voir l'article</a>
                                 </div>
-                            `;
-                            
+                            `;               
         }
         showArticle();
     }
@@ -38,12 +37,10 @@ fetch(url)
 function showArticle () {
     const hoverProducts = document.getElementsByClassName("card");
     let links = document.querySelectorAll(".cardlink");
-
     for(let i = 0; i < hoverProducts.length;i++) {
         hoverProducts[i].addEventListener("mouseover", () => {
             links[i].classList.add("showArticle");
         })
-
         hoverProducts[i].addEventListener("mouseout", () => {
             links[i].classList.remove("showArticle");
         })

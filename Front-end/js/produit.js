@@ -32,8 +32,7 @@ fetch(newUrl)
             const card = document.querySelector(".card");
             if(card) {
                 addCartActions();
-            }
-            
+            }            
         }
 
         // Fonction pour le choix des options
@@ -41,29 +40,23 @@ fetch(newUrl)
             let options = document.getElementById("options");
             for(let lenses of product.lenses) {
                 options.innerHTML += `<option value="${lenses}">${lenses}</option>`;
-            }
-            
+            }          
         }
-
-
+// fonction pour affichage du "bouton" ajouter au panier
     function addCartActions () {
         const hoverProducts = document.getElementsByClassName("card");
         let carts = document.querySelectorAll(".add-cart");
-
         for(let i = 0; i < hoverProducts.length;i++) {
             hoverProducts[i].addEventListener("mouseover", () => {
                 carts[i].classList.add("showcart");
             })
-
             hoverProducts[i].addEventListener("mouseout", () => {
                 carts[i].classList.remove("showcart");
             })
-
             onLoadCartNumbers();
-        }
-       
+        }      
     }
-    
+    //Ecoute du click sur le bouton et actions ensuite en fonction si option identique ou non et si déjà présnet ou non
     let btnAddCart = document.getElementById("add-cart");
     btnAddCart.addEventListener("click", (e) => {
         e.preventDefault();

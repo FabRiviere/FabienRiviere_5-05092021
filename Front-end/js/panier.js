@@ -6,7 +6,7 @@ onLoadCartNumbers();
 const orderForm = document.querySelector(".orderForm");
 const emptyCart = document.querySelector(".container__empty");
 
-// Fonction pour affichage message si panier vide
+// Fonction pour affichage message si panier vide 
 
 if (cart.length < 1) {
     orderForm.classList.add("tohide");
@@ -21,20 +21,20 @@ if (cart.length < 1) {
         displayCart(product);
     }
 
-    // ajout de produit
+    // ajout de la quantité de produit
     function addProduct(event) {
         const index = event.target.getAttribute("data-index");
         cart[index].quantity++;
         localStorage.setItem("cameras", JSON.stringify(cart));
         location.reload();
     }
-
+    // Ecoute du bouton d'augmentation de la quantité
     const buttonAdd = document.querySelectorAll(".plus");
     for(add of buttonAdd) {
         add.addEventListener("click", addProduct);
     }
 
-    // // supprimer un produit
+    // // diminution de la quantité d'un produit
     function subProduct(event) {
         const index = event.target.getAttribute("data-index");
         if (cart[index].quantity > 1) {
@@ -45,7 +45,7 @@ if (cart.length < 1) {
         localStorage.setItem("cameras", JSON.stringify(cart));
         location.reload();
     }
-
+    // Bouton d'écoute de la diminution de la quantité
     const buttonSub = document.querySelectorAll(".minus");
     for(sub of buttonSub) {
         sub.addEventListener("click", subProduct);
@@ -65,19 +65,15 @@ if (cart.length < 1) {
         displayCart();
         onLoadCartNumbers();
     }
-
-        
+     
     // Fonction pour vider le panier avec le bouton
     const btnDeleteCart = document.querySelector("#clearCart");
     btnDeleteCart.addEventListener("click", () => {
         clearCart();
         location.reload();
     })
-    
-    
-    
-    // Fonction pour affichage du formulaire lors de la validation du panier
-    
+        
+    // Fonction pour affichage du formulaire lors de la validation du panier   
     const validateCart = document.querySelector(".validate-cart");
     const hideBtns = document.querySelector(".hideButtons")
     validateCart.addEventListener("click", () => {
@@ -85,15 +81,13 @@ if (cart.length < 1) {
         hideBtns.classList.add("tohide");
     });
     
-    // Récupération et Validation du formulaire
-    
+    // Récupération et Validation du formulaire   
     const order = document.querySelector(".order__btn-submit");
     const regexName = /^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+))$/;
     const regexCity = /^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+)){1,10}$/;
     const regexMail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]{2,}\.[a-z]{2,4}$/;
     const regexAddress = /^(([a-zA-ZÀ-ÿ0-9]+[\s\-]{1}[a-zA-ZÀ-ÿ0-9]+)){1,10}$/;
     
-
     order.addEventListener("click", (event) =>{
     // On rassemble les informations du formulaire de contact
         let contact = {
@@ -143,7 +137,7 @@ if (cart.length < 1) {
                 const dateOrder = JSON.parse(localStorage.getItem('date')) || [];
                 dateOrder.push(fullDate);
                 localStorage.setItem('date', JSON.stringify(dateOrder));
-    
+                // Affichage des articles du panier - pour envoi à l'api
                 let products = [];
                 for(listId of cart){
                     products.push(listId.id);

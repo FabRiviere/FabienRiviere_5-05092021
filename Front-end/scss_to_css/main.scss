@@ -1,16 +1,17 @@
 // utils
 @import "../Sass/utils/variables";
 @import "../Sass/utils/mixins";
+
 //base
 
 //components
 @import "../Sass/components/button";
-// @import "../node_modules/bootstrap/scss/modal";
-// @import "../Sass/components/list-group";
 @import "../Sass/components/modal";
+
 //layout
 @import "../Sass/layout/header";
 @import "../Sass/layout/footer";
+
 //pages
 @import "../Sass/pages/home";
 @import "../Sass/pages/produit";
@@ -18,4 +19,3 @@
 @import "../Sass/pages/order";
 
 //vendors
-// @import "../node_modules/bootstrap/scss/bootstrap.scss";

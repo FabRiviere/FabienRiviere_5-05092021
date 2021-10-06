@@ -1,7 +1,8 @@
 //Constantes nécessaires
 const cart = JSON.parse(localStorage.getItem("cameras")) || [];
-
+// Url de l'api
 const url = 'http://localhost:3000/api/cameras/';
+
 // convertion unitaire du prix
 function convertPrice(productPrice) {
     let price = `${productPrice}`;
@@ -92,10 +93,8 @@ function onLoadCartNumbers() {
         for(product of cart) {
             productInCart += product.quantity;
         }
-        productNumbers.innerHTML = `<i class="fas fa-shopping-basket"></i>Panier<span class="spanCart">${productInCart}</span>`;
-        
-    }
-    
+        productNumbers.innerHTML = `<i class="fas fa-shopping-basket"></i>Panier<span class="spanCart">${productInCart}</span>`;      
+    } 
 }
 
 // Fonction pour vider le panier : 
